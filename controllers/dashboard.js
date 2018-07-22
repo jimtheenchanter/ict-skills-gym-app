@@ -10,10 +10,10 @@ const accounts = require ('./accounts.js');
 const dashboard = {
   index(request, response) {
     logger.info('dashboard rendering');
-    const loggedInUser = accounts.getCurrentUser(request);
+    const loggedInMember = accounts.getCurrentMember(request);
     const viewData = {
       title: 'Assessment',
-      assessments: assessmentStore.getMemberAssessments(loggedInUser.id),
+      assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
     };
     logger.info('about to render', assessmentStore.getAllAssessments());
     response.render('dashboard', viewData);
