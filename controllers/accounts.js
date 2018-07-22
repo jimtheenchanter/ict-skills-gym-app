@@ -1,6 +1,6 @@
 'use strict';
 
-const userstore = require('../models/user-store');
+const userstore = require('../models/member-store');
 const logger = require('../utils/logger');
 const uuid = require('uuid');
 
@@ -43,7 +43,7 @@ const accounts = {
   authenticate(request, response) {
     const user = userstore.getUserByEmail(request.body.email);
     if (user) {
-      response.cookie('playlist', user.email);
+      response.cookie('assessment', user.email);
       logger.info(`logging in ${user.email}`);
       response.redirect('/dashboard');
     } else {
