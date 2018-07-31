@@ -6,26 +6,26 @@ const uuid = require('uuid');
 
 const accounts = {
 
-  index(request, response) {
+  index(request, response) { //method
     const viewData = {
       title: 'Login or Signup',
     };
     response.render('index', viewData);
   },
 
-  login(request, response) {
+  login(request, response) { //login method
     const viewData = {
       title: 'Login to the Service',
     };
     response.render('login', viewData);
   },
 
-  logout(request, response) {
+  logout(request, response) {  //logout method
     response.cookie('playlist', '');
     response.redirect('/');
   },
 
-  signup(request, response) {
+  signup(request, response) {   //signup method
     const viewData = {
       title: 'Login to the Service',
     };
