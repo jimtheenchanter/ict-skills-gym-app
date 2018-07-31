@@ -27,34 +27,34 @@ const assessmentStore = {
 
   removeAssessment(id) {
     const assessment = this.getAssessment(id);
-    this.store.remove(this.collection, assessments);
+    this.store.remove(this.collection, assessment);
     this.store.save();
   },
 
-  removeAllPlaylists() {
+  removeAllAssessments() {
     this.store.removeAll(this.collection);
     this.store.save();
   },
 
-  addSong(id, song) {
-    const playlist = this.getPlaylist(id);
-    playlist.songs.push(song);
+  addGoal(id, weight) {
+    const assessment = this.getAssessments(id);
+    assessment.weights.push(weight);
 
-    let duration = 0;
-    for (let i = 0; i < playlist.songs.length; i++) {
-      duration += playlist.songs[i].duration;
+    let bmi = 0;
+    for (let i = 0; i < assessment.weight.length; i++) {
+      bmi += assessment.weight[i].duration;
     }
 
-    playlist.duration = duration;
+    assessment.bmi= bmi;
     this.store.save();
   },
 
-  removeSong(id, songId) {
-    const playlist = this.getPlaylist(id);
-    const songs = playlist.songs;
-    _.remove(songs, { id: songId});
+  removeGoal(id, weightId) {
+    const assessment = this.getPlaylist(id);
+    const goals = assessment.goals;
+    _.remove(goals, { id: weightId});
     this.store.save();
   },
 };
 
-module.exports = playlistStore;
+module.exports = assessmentStore;
