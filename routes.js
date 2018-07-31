@@ -3,10 +3,11 @@
 const express = require('express');
 const router = express.Router();
 
+const accounts = require('./controllers/accounts.js');
 const dashboard = require('./controllers/dashboard.js');
 const about = require('./controllers/about.js');
 const assessment = require('./controllers/assessment.js');
-const accounts = require('./controllers/accounts.js');
+
 
 router.get('/', accounts.index);
 router.get('/login', accounts.login);
