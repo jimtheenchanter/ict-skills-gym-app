@@ -15,6 +15,32 @@ const assessment = {
     };
     response.render('assessment', viewData);
   },
-  };
+  
+  
+ 
+  deleteGoal(request, response) {
+    const assessmentId = request.params.id;
+    const goalId = request.params.goalid;
+    logger.debug(`Deleting Goal ${goalId} from Assessment ${assessmentId}`);
+    assessmentStore.removeGoal(assessmentId, goalId);
+    response.redirect('/assessment/' + assessmentId);
+  },
+
+  addGoal(request, response) {
+    const assessmentId = request.params.id;
+    const assessment = assessmentStore.getAssessment(assessmentId);
+    const newGoal = {
+      id: uuid(),
+      current: request.body.current,
+      desired: request.body.desired,
+      duration: Number(request.body.duration),
+    };
+    logger.debug('New Goal = ', newGoal);
+    assessmentStore.addGoal(assessmentId, newGoal);
+    response.redirect('/assessment/' + assessmentId);
+  },
+};
+
+ 
 
 module.exports = assessment;
