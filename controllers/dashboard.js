@@ -26,6 +26,19 @@ const dashboard = {
     assessmentStore.removeAssessment(assessmentId);
     response.redirect('/dashboard');
   },
+  
+  addAssessment(request, response) {
+    const loggedInMember = accounts.getCurrentMember(request);
+    const newPlayList = {
+      id: uuid(),
+      userid: loggedInMember.id,
+      title: request.body.title,
+      songs: [],
+    };
+    logger.debug('Creating a new Assessment', newAssessment);
+    assessmentStore.addAssessment(newAssessment);
+    response.redirect('/dashboard');
+  },
 
 };
   module.exports = dashboard;
