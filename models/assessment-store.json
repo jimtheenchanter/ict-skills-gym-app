@@ -1,3 +1,9 @@
 {
-  "assessmentCollection": []
+  "assessmentCollection": [
+    {
+      "id": "8d96fe20-eac2-4212-af7a-3732da040c70",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "goals": []
+    }
+  ]
 }
