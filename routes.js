@@ -20,8 +20,6 @@ router.get('/dashboard', dashboard.index);
 router.get('/dashboard/deleteassessment/:id', dashboard.deleteAssessment);
 router.post('/dashboard/addassessment', dashboard.addAssessment);
 
-
-
 router.get('/about', about.index);
 router.get('/assessment/:id', assessment.index);
 router.get('/assessment/:id/deletegoal/:goalid', assessment.deleteGoal);
