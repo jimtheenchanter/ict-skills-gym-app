@@ -10,15 +10,15 @@ const assessment = require('./controllers/assessment.js');
 
 
 router.get('/', accounts.index);
-router.get('/login', accounts.login);
 router.get('/signup', accounts.signup);
+router.get('/login', accounts.login);
 router.get('/logout', accounts.logout);
 router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
 
 router.get('/dashboard', dashboard.index);
 router.get('/dashboard/deleteassessment/:id', dashboard.deleteAssessment);
-router.get('/dashboard/addassessment/:id', dashboard.addAssessment);
+router.post('/dashboard/addassessment/:id', dashboard.addAssessment);
 
 router.get('/about', about.index);
 router.get('/assessment/:id', assessment.index);

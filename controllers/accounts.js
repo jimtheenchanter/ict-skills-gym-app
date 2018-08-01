@@ -6,7 +6,7 @@ const uuid = require('uuid');
 
 const accounts = {
 
-  index(request, response) { //method
+  index(request, response) { //method to render pages
     const viewData = {
       title: 'Login or Signup',
     };
@@ -21,7 +21,7 @@ const accounts = {
   },
 
   logout(request, response) {  //logout method
-    response.cookie('playlist', '');
+    response.cookie('assessment', '');
     response.redirect('/');
   },
 
@@ -52,7 +52,7 @@ const accounts = {
   },
 
   getCurrentMember(request) {
-    const memberEmail = request.cookies.playlist;
+    const memberEmail = request.cookies.assessment;
     return memberstore.getMemberByEmail(memberEmail);
   },
 };

@@ -28,10 +28,10 @@ const dashboard = {
   },
   
   addAssessment(request, response) {
-    const loggedInMember = accounts.getCurrentMember(request); //find out the c
+    const loggedInMember = accounts.getCurrentMember(request); //find out the current member
     const newAssessment = {
       id: uuid(),
-      memberid: loggedInMember.id,
+      memberid: loggedInMember.id,  //all assessments will have an ID of user
       title: request.body.title,
       songs: [],
     };
