@@ -15,25 +15,29 @@
   </div>
   
   <div class="two fields">
-  <div class="field">
-    <label>Email</label>
-    <input placeholder="Email" type="text" name="email">
-  </div>
-  <div class="field">
-    <label>Password</label>
-    <input type="password" name="password">
-  </div>
+    <div class="field">
+      <label>Email</label>
+      <input placeholder="Email" type="text" name="email">
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <input type="password" name="password">
+    </div>
   </div>
   
-    <div class="three fields">
-      <div class="field">
+  <div class="three fields">
+     <div class="field">
       <label>Gender</label>
-      <select class="ui fluid dropdown">
-        <option value="">M or F</option>
-        <option value="M">Male</option>
-        <option value="F">Female</option>
-        </select>
-      </div>
+       <div class="ui selection dropdown">
+     <input type="hidden" name="gender">
+        <div class="default text">Gender</div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item" data-value="male">Male</div>
+          <div class="item" data-value="female">Female</div>
+        </div>
+       </div>    
+       </div>
   <div class="field">
     <label>Height (centimetres)</label>
     <input placeholder ="175" type="number" name="height">
@@ -41,6 +45,7 @@
   <div class="field">
     <label>Weight (kgs)</label>
     <input placeholder ="69" type="number" name="startingweight">
+  
   </div>
   </div>
   

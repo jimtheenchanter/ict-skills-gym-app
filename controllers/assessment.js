@@ -33,7 +33,7 @@ const assessment = {
       id: uuid(),
       current: request.body.current,
       desired: request.body.desired,
-      duration: Number(request.body.duration),
+      bmi: Number(request.body.bmi),
     };
     logger.debug('New Goal = ', newGoal);
     assessmentStore.addGoal(assessmentId, newGoal);
