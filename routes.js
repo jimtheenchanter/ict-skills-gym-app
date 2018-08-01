@@ -18,9 +18,13 @@ router.post('/authenticate', accounts.authenticate);
 
 router.get('/dashboard', dashboard.index);
 router.get('/dashboard/deleteassessment/:id', dashboard.deleteAssessment);
-router.post('/dashboard/addassessment/:id', dashboard.addAssessment);
+router.post('/dashboard/addassessment', dashboard.addAssessment);
+
+
 
 router.get('/about', about.index);
 router.get('/assessment/:id', assessment.index);
+router.get('/assessment/:id/deletegoal/:goalid', assessment.deletegoal);
+router.post('/assessment/:id/addgoal', assessment.addGoal);
 
 module.exports = router;

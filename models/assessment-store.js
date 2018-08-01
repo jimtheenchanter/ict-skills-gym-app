@@ -49,10 +49,10 @@ const assessmentStore = {
     this.store.save();
   },
 
-  removeGoal(id, weightId) {
-    const assessment = this.getPlaylist(id);
+  removeGoal(id, goalId) {
+    const assessment = this.getAssessment(id);
     const goals = assessment.goals;
-    _.remove(goals, { id: weightId});
+    _.remove(goals, { id: goalId});
     this.store.save();
   },
 };
