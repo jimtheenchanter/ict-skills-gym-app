@@ -12,7 +12,7 @@ const dashboard = {
     logger.info('dashboard rendering');
     const loggedInMember = accounts.getCurrentMember(request);
     const viewData = {
-      title: 'Assessment',
+      title: 'Assessments',
       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
     };
     logger.info('about to render', assessmentStore.getAllAssessments());
@@ -28,10 +28,10 @@ const dashboard = {
   },
   
   addAssessment(request, response) {
-    const loggedInMember = accounts.getCurrentMember(request);
-    const newPlayList = {
+    const loggedInMember = accounts.getCurrentMember(request); //find out the c
+    const newAssessment = {
       id: uuid(),
-      userid: loggedInMember.id,
+      memberid: loggedInMember.id,
       title: request.body.title,
       songs: [],
     };

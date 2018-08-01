@@ -6,7 +6,7 @@ const JsonStore = require('./json-store');
 const assessmentStore = {
 
   store: new JsonStore('./models/assessment-store.json', { assessmentCollection: [] }),
-  collection: 'playlistCollection',
+  collection: 'assessmentCollection',
 
   getAllAssessments() {
     return this.store.findAll(this.collection);
@@ -16,8 +16,8 @@ const assessmentStore = {
     return this.store.findOneBy(this.collection, { id: id });
   },
 
-  getMemberAssessments(userid) {
-    return this.store.findBy(this.collection, { userid: userid });
+  getMemberAssessments(memberid) {    //retrieve all assessments belonging to a specific member
+    return this.store.findBy(this.collection, { memberid: memberid });
   },
 
   addAssessment(assessment) {
