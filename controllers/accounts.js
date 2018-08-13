@@ -8,7 +8,7 @@ const accounts = {
 
   index(request, response) { //method to render pages
     const viewData = {
-      title: 'Login or Signup',
+      title: 'Login or Sign up',
     };
     response.render('index', viewData);
   },
