@@ -3,7 +3,7 @@
     {
       "id": "e88c2431-ddc2-4f1d-8eb3-bd8a1d7a6c22",
       "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "goals": []
+      "weight": []
     },
     {
       "id": "a14cce55-8f8c-475b-89a8-383f0cf673a9",
@@ -11,9 +11,24 @@
       "goals": []
     },
     {
-      "id": "7d8a90f3-fef5-41bd-9a94-e4cb19d48255",
+      "id": "25eb3b3e-5db8-449b-909a-80cfa744214d",
       "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "goals": []
+    },
+    {
+      "id": "fd3a909a-222f-4620-bde9-6750b35278e2",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "goals": []
+    },
+    {
+      "id": "581bf5dd-742f-43b5-b9e2-9c7d42bdd1ee",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "weight": "45"
+    },
+    {
+      "id": "dc8c9eaf-0dd3-458b-8d55-f8dbb0590061",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "weight": ""
     }
   ]
 }

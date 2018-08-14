@@ -1,3 +1,50 @@
+<table class="ui table">
+  <thead>
+    <tr>
+      <th>Weight</th>
+      <th>Height</th>
+      <th>Upper Arm</th>
+      <th>Chest</th>
+      <th>Waist</th>
+      <th>Hips</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each assessment}}
+      <tr>
+        <td>
+          {{weight}}
+        </td>
+        <td>
+          {{height}}
+        </td>
+        <td>
+          {{upperarm}}
+        </td>
+        <td>
+          {{chest}}
+        </td>
+        <td>
+          {{waist}}
+        </td>
+        <td>
+          {{hips}}
+        </td>
+        <td>
+          <a href="/dashboard/deleteassessment/{{id}}" class="ui icon button">
+          <i class="icon trash"></i>
+          </a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+
+
+
+
+<!--
 {{#each assessments}}
   <section class="ui stacked segment">
     <h2 class="ui header">

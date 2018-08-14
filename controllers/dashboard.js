@@ -32,8 +32,9 @@ const dashboard = {
     const newAssessment = {
       id: uuid(),
       memberid: loggedInMember.id,  //all assessments will have an ID of user
-      title: request.body.title,
-      goals: [],
+      weight: request.body.weight,
+      
+     
       
     };
     logger.debug('Creating a new Assessment', newAssessment);
