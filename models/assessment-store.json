@@ -9,27 +9,6 @@
       "id": "a14cce55-8f8c-475b-89a8-383f0cf673a9",
       "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "goals": []
-    },
-    {
-      "id": "25eb3b3e-5db8-449b-909a-80cfa744214d",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "goals": []
-    },
-    {
-      "id": "fd3a909a-222f-4620-bde9-6750b35278e2",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "goals": []
-    },
-    {
-      "id": "1dfdcaa2-d4c9-4fa0-9c8b-486e49d748ff",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "goals": [
-        {
-          "id": "af6ed549-a758-4a8c-b203-dda91957bf86",
-          "current": "df",
-          "bmi": null
-        }
-      ]
     }
   ]
 }

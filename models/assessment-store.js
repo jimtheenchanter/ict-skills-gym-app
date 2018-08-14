@@ -40,7 +40,11 @@ const assessmentStore = {
     const assessment = this.getAssessment(id);
     assessment.goals.push(goal);
 
-   /* let bmi = 0;
+   //future date & BMI
+    
+    
+    
+    /* let bmi = 0;
     for (let i = 0; i < assessment.goal.length; i++) {
       bmi += assessment.goals[i].weight;
     }
