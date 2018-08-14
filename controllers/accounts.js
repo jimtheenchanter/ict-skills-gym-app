@@ -1,6 +1,6 @@
 'use strict';
 
-const memberstore = require('../models/member-store');
+const memberstore = require('../models/member-store'); //uses the member-store for
 const logger = require('../utils/logger');
 const uuid = require('uuid');
 
