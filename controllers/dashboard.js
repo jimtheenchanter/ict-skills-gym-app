@@ -38,13 +38,15 @@ const dashboard = {
       chest: request.body.chest,
       waist: request.body.waist,
       hips: request.body.hips
- 
-      
+       
     };
     logger.debug('Creating a new Assessment', newAssessment);
     assessmentStore.addAssessment(newAssessment);
     response.redirect('/dashboard');
   },
+  
+  
+  
 
 };
   module.exports = dashboard;
