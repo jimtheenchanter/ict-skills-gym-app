@@ -12,10 +12,10 @@
     </tr>
   </thead>
   <tbody>
-    {{#each assessments}}
+    {{#each members}}
       <tr>
         <td>
-          
+          {{> firstname}}
         </td>
         <td>
           {{bmi}}
@@ -24,7 +24,7 @@
          
         </td>
         <td>
-          
+          {{finalBmi}}
         </td>
         <td>
 
@@ -33,9 +33,7 @@
         
         </td>
         <td>
-          <a href="/dashboard/deleteassessment/{{id}}" class="ui icon button">
-          <i class="icon trash"></i>
-          </a>
+          
         </td>
       </tr>
     {{/each}}
