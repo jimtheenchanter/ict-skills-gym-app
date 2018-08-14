@@ -1,0 +1,44 @@
+
+<section class="ui raised segment">
+<table class="ui table">
+  <thead>
+    <tr>
+      <th>{{firstname}}</th>
+      <th><i class="male icon"></i></th>
+      <th><i class="heartbeat icon"></i></th>
+      <th>Chest</th>
+      <th>Waist</th>
+      <th>Hips</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each assessments}}
+      <tr>
+        <td>
+          
+        </td>
+        <td>
+          {{bmi}}
+        </td>
+        <td>
+          {{upperarm}}
+        </td>
+        <td>
+          {{chest}}
+        </td>
+        <td>
+          {{waist}}
+        </td>
+        <td>
+          {{hips}}
+        </td>
+        <td>
+          <a href="/dashboard/deleteassessment/{{id}}" class="ui icon button">
+          <i class="icon trash"></i>
+          </a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+</section>
