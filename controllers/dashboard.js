@@ -33,6 +33,12 @@ const dashboard = {
       id: uuid(),
       memberid: loggedInMember.id,  //all assessments will have an ID of user
       weight: request.body.weight,
+      thigh: request.body.thigh,
+      upperarm: request.body.upperarm,
+      chest: request.body.chest,
+      waist: request.body.waist,
+      hips: request.body.hips
+      
       
      
       
