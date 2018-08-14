@@ -39,6 +39,13 @@ const assessment = {
     assessmentStore.addGoal(assessmentId, newGoal);
     response.redirect('/assessment/' + assessmentId);
   },
+  
+  calculateBmi(request, response) {
+   var weight = request.params.weight;
+  const
+    
+  },
+  
 };
 
  
