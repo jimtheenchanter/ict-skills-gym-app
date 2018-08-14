@@ -27,7 +27,7 @@ const accounts = {
 
   signup(request, response) {   //signup method
     const viewData = {
-      title: 'Login to the Service',
+      title: 'Sign up to The Gym',
     };
     response.render('signup', viewData);
   },
