@@ -38,9 +38,7 @@ const dashboard = {
       chest: request.body.chest,
       waist: request.body.waist,
       hips: request.body.hips
-      
-      
-     
+ 
       
     };
     logger.debug('Creating a new Assessment', newAssessment);
