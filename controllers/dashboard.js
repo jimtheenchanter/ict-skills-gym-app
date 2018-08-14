@@ -34,6 +34,7 @@ const dashboard = {
       memberid: loggedInMember.id,  //all assessments will have an ID of user
       title: request.body.title,
       goals: [],
+      
     };
     logger.debug('Creating a new Assessment', newAssessment);
     assessmentStore.addAssessment(newAssessment);
