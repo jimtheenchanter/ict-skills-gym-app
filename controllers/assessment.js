@@ -3,6 +3,8 @@
 const logger = require('../utils/logger');
 const assessmentStore = require('../models/assessment-store');
 const uuid = require('uuid');
+//const bmicalc = require('../utils/bmi-calc');
+//LET BMI CATEGORY = BMICALC.NAMEoFmETHOD(USERPARAMS);
 
 //assessment object made up of assessmentid and viewdata
 const assessment = {
