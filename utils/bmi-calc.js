@@ -1,5 +1,5 @@
 const bmiCalc = {
-  calculateBim(member, weight){
+  calculateBmi(member, weight){
     let bmiValue = Math.round(weight/(member.height * member.height));
     return bmiValue;
   },
@@ -24,27 +24,29 @@ const bmiCalc = {
 
   isIdealBodyWeight(member, assessment){
     
-    let = idealWeight;
+    let idealWeight;
         if(member.gender == "M"){
             if(member.getHeight() > 1.524 ){
-                idealWeight = (float) (50 + (((member.getHeight()-1.524)/0.0254) * 2.3));
+                idealWeight = (50 + (((member.getHeight()-1.524)/0.0254) * 2.3));
             }else{
                 idealWeight = 50;
             }
-            if((idealWeight > assessment.weight - 0.2f) && (idealWeight < assessment.weight + 0.2f)){
+            if((idealWeight > assessment.weight - 0.2) && (idealWeight < assessment.weight + 0.2)){
                 return true;
             }
         }else if(member.gender == "F"  || member.gender == "Unspecified"){
             if(member.getHeight() > 1.524 ){
-                idealWeight = (float) (45.5 + (((member.getHeight()-1.524)/0.0254) * 2.3));
+                idealWeight = (45.5 + (((member.getHeight()-1.524)/0.0254) * 2.3));
             }
             else{
-                idealWeight = (float) 45.5;
+                idealWeight = 45.5;
             }
-            if((idealWeight > assessment.weight - 0.2f && idealWeight < assessment.weight + 0.2f))
+            if((idealWeight > assessment.weight - 0.2 && idealWeight < assessment.weight + 0.2))
                 return true;
         }
         return false;
   }
 
 }
+
+module.export = bmiCalc;
