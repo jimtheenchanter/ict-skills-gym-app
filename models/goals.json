@@ -1,0 +1,10 @@
+{
+  "goals": [
+    {
+      "goalId":"1",
+      "futureDate": "123-23-23",
+      "measurement": "34",
+      "userId": ""
+    }
+  ]
+}
