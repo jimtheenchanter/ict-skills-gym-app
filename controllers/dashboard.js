@@ -17,7 +17,7 @@ const dashboard = {
       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
       bmi: bmicalc.determineCategory(bmicalc.calculateBmi(loggedInMember,loggedInMember.weight))
     };
-    console.log(viewData.bmi);
+    logger.info("number please",viewData.bmi);
     logger.info('about to render', assessmentStore.getAllAssessments());
     response.render('dashboard', viewData);
   },

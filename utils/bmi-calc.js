@@ -1,6 +1,6 @@
 const bmiCalc = {
   calculateBmi(member, weight){
-    let bmiValue = Math.round(weight/(member.height * member.height));
+    let bmiValue = Math.round(Number(weight)/(Number(member.height) * Number(member.height)));
     return bmiValue;
   },
   
@@ -49,4 +49,4 @@ const bmiCalc = {
 
 }
 
-module.export = bmiCalc;
+module.exports = bmiCalc;
