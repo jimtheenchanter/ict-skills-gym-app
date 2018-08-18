@@ -1,5 +1,7 @@
+const logger = require('../utils/logger');
 const bmiCalc = {
   calculateBmi(member, weight){
+    logger.info(member, weight);
     let bmiValue = Math.round(Number(weight)/(Number(member.height) * Number(member.height)));
     return bmiValue;
   },
