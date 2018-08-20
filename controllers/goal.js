@@ -20,15 +20,15 @@ const goal = {
  
   deleteGoal(request, response) {
    
-    const goalId = request.params.goalid;
-    logger.debug(`Deleting Goal ${goalId} from Assessment ${assessmentId}`);
-    goalStore.removeGoal(assessmentId, goalId);
-    response.redirect('/assessment/' + assessmentId);
+    const goalId = request.params.goalId;
+    logger.debug(`Deleting Goal ${goalId} from Goals ${goalId}`);
+    goalStore.removeGoal(goalId, goalId);
+    response.redirect('/goal/' + goalId);
   },
 
   addGoal(request, response) {
-    const assessmentId = request.params.id;
-    const assessment = assessmentStore.getAssessment(assessmentId);
+    
+    const goal = goalStore.getGoal(goalId);
     const newGoal = {
       id: uuid(),
       current: request.body.current,
