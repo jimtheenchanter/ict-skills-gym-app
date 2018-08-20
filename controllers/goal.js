@@ -16,9 +16,7 @@ const goal = {
     response.render('goal', viewData);
   },
   
-  goalTrend(request, response)
   
-  { }
  
 //   deleteGoal(request, response) {
    
