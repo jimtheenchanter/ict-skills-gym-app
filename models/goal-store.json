@@ -1,69 +1,13 @@
 {
+  "goals": [],
   "goalCollection": [
-    {
-      "id": "55cbbb03-6f9e-4814-8f8b-c050a8ec80e4",
-      "desired": "25",
-      "bmi": null
-    },
-    {
-      "id": "bec328fd-e5f7-459c-a9b7-21f6b7abc991",
-      "desired": "69",
-      "bmi": null
-    },
-    {
-      "id": "135455bc-5def-4a29-95b2-003c3db0eec2",
-      "targetdate": "2019-07-01",
-      "desired": "34",
-      "bmi": null
-    },
-    {
-      "id": "35421766-2291-4853-8134-16b6d20b6cf5",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "targetdate": "1980-07-01",
-      "desire": "69",
-      "bmi": null
-    },
-    {
-      "id": "bf6bb590-13fe-45e4-aa13-caadf97539c7",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "targetdate": "1980-07-01",
-      "desire": "69",
-      "bmi": null
-    },
-    {
-      "id": "a0b7215e-0d17-4031-8247-e4a3b764dac9",
-      "desired": "55",
-      "bmi": null
-    },
-    {
-      "id": "41e3ff60-95b8-4530-8c01-398ba67a5124",
-      "desired": "98",
-      "bmi": null
-    },
-    {
-      "id": "4608ebfd-b2d3-478f-a305-f215f7ed5382",
-      "desired": "77",
-      "bmi": null
-    },
-    {
-      "id": "9b9dbd53-6718-4b4c-9289-c6941af66570",
-      "desired": "77",
-      "bmi": null
-    },
-    {
-      "id": "45d08400-17f7-4dd4-878a-24b4db24cdf0",
-      "desired": "77",
-      "bmi": null
-    },
-    {
-      "id": "a3643a3b-8b8a-4b0b-8d8b-fad6abea5f06",
-      "desired": "77",
-      "bmi": null
-    },
-    {
-      "id": "64785ad1-0b39-4b86-b9a6-e60645a41884",
-      "desired": "77",
-      "bmi": null
-    }
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
   ]
 }

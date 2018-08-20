@@ -6,7 +6,7 @@ const assessmentStore = require('../models/assessment-store');
 const goalStore = require('../models/goal-store');
 const uuid = require('uuid');
 
-const bmiCalc = require('../utils/bmi-calc');
+const bmicalc = require('../utils/bmi-calc');
 
 
 //dashboard object
@@ -17,8 +17,8 @@ const dashboard = {
     const viewData = {
       title: 'Assessments',
       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
-      bmi: bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
-      goals: goalStore.getMemberGoals(loggedInMember.id),
+      bmi: bmicalc.determineCategory(bmicalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
+      goals: goalStore.getMemberGoals(
     };
     logger.info("number please",viewData);
     logger.info('about to render', assessmentStore.getAllAssessments());
@@ -53,24 +53,24 @@ const dashboard = {
   
   
   deleteGoal(request, response) {
-     const goalId = request.params.id;
+    
+    const goalId = request.params.goalid;
     logger.debug(`Deleting Goal ${goalId} from Goal ${goalId}`);
     goalStore.removeGoal(goalId, goalId);
     response.redirect('/dashboard/' );
   },
 
   addGoal(request, response) {
-    const loggedInMember = accounts.getCurrentMember(request); //find out the current member
-   const goalId = request.params.id;
-  const goal = goalStore.getGoal(goalId);
+    const goalId = request.params.id;
+    const goal = goalStore.getGoal(goalId);
     const newGoal = {
       id: uuid(),
-      targetdate: request.body.current,
-      desired: request.body.desire,
-      bmi: Number(request.body.bmiCalc),
+      current: request.body.current,
+      desired: request.body.desired,
+      bmi: Number(request.body.bmi),
     };
     logger.debug('New Goal = ', newGoal);
-    goalStore.addGoal(newGoal);
+    goalStore.addGoal(goalId, newGoal);
     response.redirect('/dashboard/' );
   },
   
