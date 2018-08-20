@@ -18,7 +18,7 @@ const dashboard = {
       title: 'Assessments',
       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
       bmi: bmicalc.determineCategory(bmicalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
-      goals: goalStore.getMemberGoals(
+      goals: goalStore.getMemberGoals(loggedInMember.id),
     };
     logger.info("number please",viewData);
     logger.info('about to render', assessmentStore.getAllAssessments());
