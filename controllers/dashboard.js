@@ -2,6 +2,7 @@
 
 const logger = require('../utils/logger');
 const assessmentStore = require('../models/assessment-store');
+const goalStore = require('../models/goal-store');
 const uuid = require('uuid');
 const accounts = require ('./accounts.js');
 const bmicalc = require('../utils/bmi-calc');
@@ -58,8 +59,8 @@ const dashboard = {
   },
 
   addGoal(request, response) {
-    const assessmentId = request.params.id;
-    const assessment = assessmentStore.getAssessment(assessmentId);
+    const goalId = request.params.id;
+    const goal = goalStore.getGoal(goalId);
     const newGoal = {
       id: uuid(),
       current: request.body.current,

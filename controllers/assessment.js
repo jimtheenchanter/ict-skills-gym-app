@@ -20,6 +20,7 @@ const assessment = {
   
   
  
+  
   deleteGoal(request, response) {
     const assessmentId = request.params.id;
     const goalId = request.params.goalid;
@@ -41,6 +42,8 @@ const assessment = {
     assessmentStore.addGoal(assessmentId, newGoal);
     response.redirect('/assessment/' + assessmentId);
   },
+  
+
   
   calculateBmi(request, response) {
     var weight = request.params.weight;
