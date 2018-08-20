@@ -27,7 +27,7 @@ const goal = {
   },
 
   addGoal(request, response) {
-    
+    const goalId = request.params.goalId;
     const goal = goalStore.getGoal(goalId);
     const newGoal = {
       id: uuid(),
