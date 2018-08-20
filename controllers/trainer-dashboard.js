@@ -1,7 +1,7 @@
 'use strict';
 
 const logger = require('../utils/logger');
-const assessmentStore = require('../models/assessment-store');
+const memberStore = require('../models/member-store');
 const uuid = require('uuid');
 const accounts = require ('./accounts.js');
 const bmicalc = require('../utils/bmi-calc');
@@ -11,26 +11,26 @@ const bmicalc = require('../utils/bmi-calc');
 const dashboard = {
   index(request, response) {
     logger.info('dashboard rendering');
-    const loggedInMember = accounts.getCurrentMember(request);
+    const listAllMembers = memberStore.getAllMembers(request);
     const viewData = {
-      title: 'Assessments',
-      assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
-      bmi: bmicalc.determineCategory(bmicalc.calculateBmi(loggedInMember,loggedInMember.startingweight))
+      title: 'Members',
+      members: memberStore.getAllMembers(),
+      
     };
     logger.info("number please",viewData);
-    logger.info('about to render', assessmentStore.getAllAssessments());
-    response.render('dashboard', viewData);
+    logger.info('about to render', memberStore.getAllMembers());
+    response.render('trainer dashboard', viewData);
   },
 
 
- deleteAssessment(request, response) {
-    const assessmentId = request.params.id;
-    logger.debug(`Deleting Assessment${assessmentId}`);
-    assessmentStore.removeAssessment(assessmentId);
+ deleteMember(request, response) {
+    const memberId = request.params.id;
+    logger.debug(`Deleting member${memberId}`);
+    memberStore.removeAssessment(memberId);
     response.redirect('/dashboard');
   },
   
-  addAssessment(request, response) {
+  addGoals(request, response) {
     const loggedInMember = accounts.getCurrentMember(request); //find out the current member
     const newAssessment = {
       id: uuid(),
@@ -44,11 +44,11 @@ const dashboard = {
        
     };
     logger.debug('Creating a new Assessment', newAssessment);
-    assessmentStore.addAssessment(newAssessment);
+    memberStore.addAssessment(newAssessment);
     response.redirect('/dashboard');
   },
   
 
 
 };
-  module.exports = dashboard;
+  module.exports = trainerDashboard;
