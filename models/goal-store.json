@@ -1,12 +1,5 @@
 {
   "goalCollection": [
-    {},
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
     {
       "id": "55cbbb03-6f9e-4814-8f8b-c050a8ec80e4",
       "desired": "25",
@@ -38,10 +31,18 @@
       "bmi": null
     },
     {
-      "id": "a208186b-45b3-4f67-aeb7-d91f7f3f2291",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "targetdate": "2019-03-02",
-      "desire": "48",
+      "id": "a0b7215e-0d17-4031-8247-e4a3b764dac9",
+      "desired": "55",
+      "bmi": null
+    },
+    {
+      "id": "41e3ff60-95b8-4530-8c01-398ba67a5124",
+      "desired": "98",
+      "bmi": null
+    },
+    {
+      "id": "4608ebfd-b2d3-478f-a305-f215f7ed5382",
+      "desired": "77",
       "bmi": null
     }
   ]

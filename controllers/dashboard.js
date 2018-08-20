@@ -61,14 +61,13 @@ const dashboard = {
 
   addGoal(request, response) {
     const loggedInMember = accounts.getCurrentMember(request); //find out the current member
-    // const goalId = request.params.id;
+   // const goalId = request.params.id;
     // const goal = goalStore.getGoal(goalId);
     const newGoal = {
       id: uuid(),
-      memberid: loggedInMember.id,  //all assessments will have an ID of user
-      targetdate: request.body.targetdate,
-      desire: request.body.desire,
-      bmi: Number(request.body.bmi),
+      targetdate: request.body.current,
+      desired: request.body.desire,
+      bmi: Number(request.body.bmiCalc),
     };
     logger.debug('New Goal = ', newGoal);
     goalStore.addGoal(newGoal);
