@@ -3,12 +3,12 @@
 const _ = require('lodash');
 const JsonStore = require('./json-store');
 
-const assessmentStore = {
+const goalStore = {
 
   store: new JsonStore('./models/assessment-store.json', { assessmentCollection: [] }),
   collection: 'assessmentCollection',
 
-  getAllAssessments() {
+  getAllGOals() {
     return this.store.findAll(this.collection);
   },
 

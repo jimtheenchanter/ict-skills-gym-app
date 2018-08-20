@@ -1,28 +1,28 @@
 'use strict';
 
 const logger = require('../utils/logger');
-const assessmentStore = require('../models/assessment-store');
+const goalStore = require('../models/goal-store');
 const uuid = require('uuid');
 
-//assessment object made up of assessmentid and viewdata
+//assessment object made up of goalid and viewdata
 const goal = {
   index(request, response) {
-    const assessmentId = request.params.id;
-    logger.debug('Assessment id = ', assessmentId);
+    const goalId = request.params.id;
+    logger.debug('Goalid = ', goalId);
     const viewData = {
-      title: 'Assessment',
-      assessment: assessmentStore.getAssessment(assessmentId),
+      title: 'Goal',
+      goal: goalStore.getGoal(goalId),
     };
-    response.render('assessment', viewData);
+    response.render('goal', viewData);
   },
   
   
  
   deleteGoal(request, response) {
-    const assessmentId = request.params.id;
+   
     const goalId = request.params.goalid;
     logger.debug(`Deleting Goal ${goalId} from Assessment ${assessmentId}`);
-    assessmentStore.removeGoal(assessmentId, goalId);
+    goalStore.removeGoal(assessmentId, goalId);
     response.redirect('/assessment/' + assessmentId);
   },
 
