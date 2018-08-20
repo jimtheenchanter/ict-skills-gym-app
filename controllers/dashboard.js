@@ -61,8 +61,8 @@ const dashboard = {
 
   addGoal(request, response) {
     const loggedInMember = accounts.getCurrentMember(request); //find out the current member
-   // const goalId = request.params.id;
-    // const goal = goalStore.getGoal(goalId);
+   const goalId = request.params.id;
+  const goal = goalStore.getGoal(goalId);
     const newGoal = {
       id: uuid(),
       targetdate: request.body.current,

@@ -11,7 +11,7 @@ const goal = {
     logger.debug('Goalid = ', goalId);
     const viewData = {
       title: 'Goal',
-      goal: goalStore.getGoal(goalId),
+      goals: goalStore.getGoal(goalId),
       
     };
     response.render('goal', viewData);
