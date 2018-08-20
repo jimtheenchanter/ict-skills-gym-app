@@ -1,12 +1,27 @@
 {
   "goalCollection": [
     {
-      "id": "9c0a23f4-c411-4bb3-9e34-c040ff871e82",
+      "id": "cf49eee8-ba26-4518-871e-ea5eb9bbcf61",
       "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "bmi": null
     },
     {
-      "id": "29e18856-0a13-43ca-a865-b9a22162cade",
+      "id": "0721b93e-558b-4c8d-af86-574d551110ba",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "bmi": null
+    },
+    {
+      "id": "6cb7310f-f59d-492f-afd0-198b987a522f",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "bmi": null
+    },
+    {
+      "id": "cb1a36be-2d77-47e8-a73c-43d289787c28",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "bmi": null
+    },
+    {
+      "id": "d60db411-5604-4082-8a29-f55c1752481d",
       "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "bmi": null
     }
