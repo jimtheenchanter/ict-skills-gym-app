@@ -1,14 +1,9 @@
 {
-  "goals": [],
   "goalCollection": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
+    {},
+    {
+      "id": "74cb7d82-77bf-419a-b1e9-b9838d0abb08",
+      "bmi": null
+    }
   ]
 }

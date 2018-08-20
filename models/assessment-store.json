@@ -29,6 +29,16 @@
       "chest": "54",
       "waist": "54",
       "hips": "543"
+    },
+    {
+      "id": "b278ff69-60a8-4db8-9869-b181c84308d2",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "weight": "88",
+      "thigh": "88",
+      "upperarm": "88",
+      "chest": "88",
+      "waist": "88",
+      "hips": "88"
     }
   ]
 }

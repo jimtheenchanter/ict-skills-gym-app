@@ -54,16 +54,14 @@ const dashboard = {
   
   
   deleteGoal(request, response) {
-    
-    const goalId = request.params.goalid;
+    const goalId = request.params.id;
     logger.debug(`Deleting Goal ${goalId} from Goal ${goalId}`);
-    goalStore.removeGoal(goalId, goalId);
+    goalStore.removeGoal(goalId);
     response.redirect('/dashboard/' );
   },
 
   addGoal(request, response) {
-    const goalId = request.params.id;
-    const goal = goalStore.getGoal(goalId);
+    const loggedInMember = accounts.getCurrentMember(request); //find out the current member
     const newGoal = {
       id: uuid(),
       current: request.body.current,
@@ -71,7 +69,7 @@ const dashboard = {
       bmi: Number(request.body.bmi),
     };
     logger.debug('New Goal = ', newGoal);
-    goalStore.addGoal(goalId, newGoal);
+    goalStore.addGoal(newGoal);
     response.redirect('/dashboard/' );
   },
   
