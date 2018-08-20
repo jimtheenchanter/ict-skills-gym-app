@@ -18,9 +18,11 @@ const dashboard = {
     const viewData = {
       title: 'Dashboard',
       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
-      firstName: members.firstName,
-      bmi: bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
+      // firstName: memberStore(loggedInMember.firstName),
+      bmiCategory: bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
+      bmi: bmiCalc.calculateBmi,
       goals: goalStore.getMemberGoals(loggedInMember.id),
+      
     };
     
     logger.info("number please",viewData);
