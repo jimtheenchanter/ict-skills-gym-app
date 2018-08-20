@@ -15,7 +15,7 @@ const dashboard = {
     logger.info('dashboard rendering');
     const loggedInMember = accounts.getCurrentMember(request);
     const viewData = {
-      title: 'Dashboard',
+      title: 'Gym Dashboard',
       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
       bmi: bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
       goals: goalStore.getMemberGoals(loggedInMember.id)}
