@@ -53,7 +53,7 @@ const dashboard = {
   
   
   deleteGoal(request, response) {
-     const goalId = request.params.goalid;
+     const goalId = request.params.id;
     logger.debug(`Deleting Goal ${goalId} from Goal ${goalId}`);
     goalStore.removeGoal(goalId, goalId);
     response.redirect('/dashboard/' );
@@ -65,8 +65,9 @@ const dashboard = {
     // const goal = goalStore.getGoal(goalId);
     const newGoal = {
       id: uuid(),
-      current: request.body.current,
-      desired: request.body.desire,
+      memberid: loggedInMember.id,  //all assessments will have an ID of user
+      targetdate: request.body.targetdate,
+      desire: request.body.desire,
       bmi: Number(request.body.bmi),
     };
     logger.debug('New Goal = ', newGoal);
