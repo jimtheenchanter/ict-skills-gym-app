@@ -36,8 +36,8 @@ const goal = {
       bmi: Number(request.body.bmi),
     };
     logger.debug('New Goal = ', newGoal);
-    assessmentStore.addGoal(assessmentId, newGoal);
-    response.redirect('/assessment/' + assessmentId);
+    goalStore.addGoal(goalId, newGoal);
+    response.redirect('/goal/' + goalId);
   },
   
   calculateBmi(request, response) {

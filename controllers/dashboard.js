@@ -48,6 +48,29 @@ const dashboard = {
     response.redirect('/dashboard');
   },
   
+  
+    deleteGoal(request, response) {
+    
+    const goalId = request.params.goalid;
+    logger.debug(`Deleting Goal ${goalId} from Goal ${goalId}`);
+    goalStore.removeGoal(goalId, goalId);
+    response.redirect('/goal/' + goalId);
+  },
+
+  addGoal(request, response) {
+    const assessmentId = request.params.id;
+    const assessment = assessmentStore.getAssessment(assessmentId);
+    const newGoal = {
+      id: uuid(),
+      current: request.body.current,
+      desired: request.body.desired,
+      bmi: Number(request.body.bmi),
+    };
+    logger.debug('New Goal = ', newGoal);
+    goalStore.addGoal(goalId, newGoal);
+    response.redirect('/goal/' + goalId);
+  },
+  
 
 
 };
