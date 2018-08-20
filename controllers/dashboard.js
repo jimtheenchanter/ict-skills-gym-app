@@ -65,9 +65,9 @@ const dashboard = {
     const newGoal = {
       id: uuid(),
       memberid: loggedInMember.id,
-      current: request.body.current,
+      targetdate: request.body.targetdate,
       desired: request.body.desired,
-      bmi: Number(request.body.bmi),
+      bmi: Number(request.body.bmiCalc),
     };
     logger.debug('New Goal = ', newGoal);
     goalStore.addGoal(newGoal);
