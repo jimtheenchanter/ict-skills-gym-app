@@ -12,20 +12,20 @@
     </tr>
   </thead>
   <tbody>
-    {{#each members}}
+    
       <tr>
         <td>
-          {{ members.firstName}}
+          {{firstName}}
         </td>
         <td>
           {{assessment.calculateBmi}}
         </td>
         <td>
-         
+         Jam
          {{bmiCalc.bmiCategory}}
         </td>
           <td>
-          {{bmi}}
+          {{bmiCalc.bmiValue}}
         </td>
         <td>
 
@@ -35,7 +35,7 @@
         </td>
        
       </tr>
-    {{/each}}
+   
   </tbody>
 </table>
 </section>
