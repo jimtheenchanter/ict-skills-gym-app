@@ -20,25 +20,25 @@ const goalStore = {
     return this.store.findBy(this.collection, { memberid: memberid });
   },
 
-  addAssessment(assessment) {
-    this.store.add(this.collection, assessment);
+  addGoal(goal) {
+    this.store.add(this.collection, goal);
     this.store.save();
   },
 
-  removeAssessment(id) {
-    const assessment = this.getAssessment(id);
-    this.store.remove(this.collection, assessment);
+  removeGoal(id) {
+    const goal = this.getGoal(id);
+    this.store.remove(this.collection, goal);
     this.store.save();
   },
 
-  removeAllAssessments() {
+  removeAllGoals() {
     this.store.removeAll(this.collection);
     this.store.save();
   },
 
   addGoal(id, goal) {
-    const assessment = this.getAssessment(id);
-    assessment.goals.push(goal);
+    const goal = this.getGoal(id);
+    goal.goals.push(goal);
 
    //future date & BMI
     
