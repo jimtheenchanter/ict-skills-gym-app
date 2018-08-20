@@ -1,10 +1,11 @@
 'use strict';
 
+const accounts = require ('./accounts.js');
 const logger = require('../utils/logger');
 const assessmentStore = require('../models/assessment-store');
 const goalStore = require('../models/goal-store');
 const uuid = require('uuid');
-const accounts = require ('./accounts.js');
+
 const bmicalc = require('../utils/bmi-calc');
 
 
@@ -16,7 +17,8 @@ const dashboard = {
     const viewData = {
       title: 'Assessments',
       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
-      bmi: bmicalc.determineCategory(bmicalc.calculateBmi(loggedInMember,loggedInMember.startingweight))
+      bmi: bmicalc.determineCategory(bmicalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
+      goals: goalStore.getMemberGoals(
     };
     logger.info("number please",viewData);
     logger.info('about to render', assessmentStore.getAllAssessments());

@@ -1,16 +1,17 @@
  
 <section class="ui raised segment">
-  {{#each goals}}
+  
 <table class="ui table">
   <thead>
     <tr>
       <th>Target BMI</th>
       <th>Achievable Date</th>
+      <th>Goal Status</th>
       
     </tr>
   </thead>
   <tbody>
-   
+   {{#each goals}}
       <tr>
         <td>
           {{desire}}
@@ -26,10 +27,10 @@
         </td>
 -->
       </tr>
-    
+    {{/each}}
   </tbody>
 </table>
-  {{/each}}
+  
 </section>
 
 
