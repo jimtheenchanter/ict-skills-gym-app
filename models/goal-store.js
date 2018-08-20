@@ -5,18 +5,18 @@ const JsonStore = require('./json-store');
 
 const goalStore = {
 
-  store: new JsonStore('./models/assessment-store.json', { assessmentCollection: [] }),
-  collection: 'assessmentCollection',
+  store: new JsonStore('./models/goal-store.json', { goalCollection: [] }),
+  collection: 'goalCollection',
 
-  getAllGOals() {
+  getAllGoals() {
     return this.store.findAll(this.collection);
   },
 
-  getAssessment(id) {
+  getGoal(id) {
     return this.store.findOneBy(this.collection, { id: id });
   },
 
-  getMemberAssessments(memberid) {    //retrieve all assessments belonging to a specific member
+  getMemberGoals(memberid) {    //retrieve all goals belonging to a specific member
     return this.store.findBy(this.collection, { memberid: memberid });
   },
 
