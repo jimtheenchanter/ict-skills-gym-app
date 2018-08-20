@@ -21,7 +21,7 @@ const accounts = {
   },
 
   logout(request, response) {  //logout method
-    response.cookie('assessment', '');
+    response.cookie('gym', '');
     response.redirect('/');
   },
 
@@ -43,7 +43,7 @@ const accounts = {
   authenticate(request, response) {
     const member = memberstore.getMemberByEmail(request.body.email);
     if (member) {
-      response.cookie('assessment', member.email);
+      response.cookie('gym', member.email);
       logger.info(`logging in ${member.email}`);
       response.redirect('/dashboard');
     } else {
@@ -55,6 +55,10 @@ const accounts = {
     const memberEmail = request.cookies.assessment;
     return memberstore.getMemberByEmail(memberEmail);
   },
+  
+  settings(request, response){
+}
 };
+  
 
 module.exports = accounts;
