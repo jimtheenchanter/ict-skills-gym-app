@@ -15,7 +15,7 @@ const dashboard = {
     logger.info('dashboard rendering');
     const loggedInMember = accounts.getCurrentMember(request);
     const viewData = {
-      title: 'Assessments',
+      title: 'Dashboard',
       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
       bmi: bmicalc.determineCategory(bmicalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
       goals: goalStore.getMemberGoals(loggedInMember.id)}
@@ -64,6 +64,7 @@ const dashboard = {
     const loggedInMember = accounts.getCurrentMember(request); //find out the current member
     const newGoal = {
       id: uuid(),
+      memberid: loggedInMember.id,
       current: request.body.current,
       desired: request.body.desired,
       bmi: Number(request.body.bmi),

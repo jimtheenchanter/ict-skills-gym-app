@@ -1,8 +1,13 @@
 {
   "goalCollection": [
-    {},
     {
-      "id": "74cb7d82-77bf-419a-b1e9-b9838d0abb08",
+      "id": "9c0a23f4-c411-4bb3-9e34-c040ff871e82",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "bmi": null
+    },
+    {
+      "id": "29e18856-0a13-43ca-a865-b9a22162cade",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "bmi": null
     }
   ]

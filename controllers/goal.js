@@ -4,7 +4,7 @@ const logger = require('../utils/logger');
 const goalStore = require('../models/goal-store');
 const uuid = require('uuid');
 
-//assessment object made up of goalid and viewdata
+//goal object made up of goalid and viewdata
 const goal = {
   index(request, response) {
     const goalId = request.params.id;
