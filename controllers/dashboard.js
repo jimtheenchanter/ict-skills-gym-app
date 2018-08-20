@@ -3,6 +3,7 @@
 const accounts = require ('./accounts.js');
 const logger = require('../utils/logger');
 const assessmentStore = require('../models/assessment-store');
+const memberStore = require('../models/member-store');
 const goalStore = require('../models/goal-store');
 const uuid = require('uuid');
 
@@ -17,6 +18,7 @@ const dashboard = {
     const viewData = {
       title: 'Dashboard',
       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
+      firstName: members.firstName,
       bmi: bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
       goals: goalStore.getMemberGoals(loggedInMember.id),
     };

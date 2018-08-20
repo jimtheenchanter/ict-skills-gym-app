@@ -1,16 +1,6 @@
 {
   "assessmentCollection": [
     {
-      "id": "9c97f68b-63cc-40d1-862c-3b52fb2ac87b",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "weight": "45",
-      "thigh": "65",
-      "upperarm": "75",
-      "chest": "55",
-      "waist": "85",
-      "hips": "95"
-    },
-    {
       "id": "d629d902-03ab-443f-823b-023687b5ac45",
       "memberid": "a6225c16-6a64-4784-97ea-c273edfa009b",
       "weight": "26",
@@ -21,34 +11,14 @@
       "hips": "71"
     },
     {
-      "id": "83fd0e22-95db-4485-a76e-cde0050b02b4",
+      "id": "4b67992b-890f-4061-8174-2b42be01e42f",
       "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "weight": "45",
-      "thigh": "54",
-      "upperarm": "54",
-      "chest": "54",
-      "waist": "54",
-      "hips": "543"
-    },
-    {
-      "id": "b278ff69-60a8-4db8-9869-b181c84308d2",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "weight": "88",
-      "thigh": "88",
-      "upperarm": "88",
-      "chest": "88",
-      "waist": "88",
-      "hips": "88"
-    },
-    {
-      "id": "d1cdb87f-50d6-47b7-89ea-27fcaf1098f9",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "weight": "26",
-      "thigh": "26",
-      "upperarm": "26",
-      "chest": "26",
-      "waist": "26",
-      "hips": "26"
+      "weight": "28",
+      "thigh": "20",
+      "upperarm": "80",
+      "chest": "40",
+      "waist": "90",
+      "hips": "40"
     }
   ]
 }
