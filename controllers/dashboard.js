@@ -50,7 +50,7 @@ const dashboard = {
   },
   
   
-    deleteGoal(request, response) {
+  deleteGoal(request, response) {
     
     const goalId = request.params.goalid;
     logger.debug(`Deleting Goal ${goalId} from Goal ${goalId}`);

@@ -20,14 +20,14 @@ const assessment = {
   
   
  
-  
+  /*
   deleteGoal(request, response) {
     const assessmentId = request.params.id;
     const goalId = request.params.goalid;
     logger.debug(`Deleting Goal ${goalId} from Assessment ${assessmentId}`);
     assessmentStore.removeGoal(assessmentId, goalId);
     response.redirect('/assessment/' + assessmentId);
-  },
+  },*/
 
   addGoal(request, response) {
     const assessmentId = request.params.id;
