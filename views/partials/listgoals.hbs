@@ -1,5 +1,6 @@
-
+ 
 <section class="ui raised segment">
+  {{#each goals}}
 <table class="ui table">
   <thead>
     <tr>
@@ -9,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    {{#each goals}}
+   
       <tr>
         <td>
           {{desire}}
@@ -25,9 +26,10 @@
         </td>
 -->
       </tr>
-    {{/each}}
+    
   </tbody>
 </table>
+  {{/each}}
 </section>
 
 

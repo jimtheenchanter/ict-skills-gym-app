@@ -28,6 +28,6 @@ router.get('/dashboard/deletegoal/:id', dashboard.deleteGoal);
 router.get('/about', about.index);
 router.get('/assessment/:id', assessment.index);
 //router.get('/goal/:id/deletegoal/:goalId', goal.deleteGoal);
-router.post('/assessment/:id/addgoal', assessment.addGoal);
+// router.post('/dashboard/addgoal', dashboard.addGoal);
 
 module.exports = router;

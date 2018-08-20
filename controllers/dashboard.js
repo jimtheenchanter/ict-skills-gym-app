@@ -55,7 +55,7 @@ const dashboard = {
     const goalId = request.params.goalid;
     logger.debug(`Deleting Goal ${goalId} from Goal ${goalId}`);
     goalStore.removeGoal(goalId, goalId);
-    response.redirect('/goal/' + goalId);
+    response.redirect('/dashboard/' );
   },
 
   addGoal(request, response) {
@@ -69,7 +69,7 @@ const dashboard = {
     };
     logger.debug('New Goal = ', newGoal);
     goalStore.addGoal(goalId, newGoal);
-    response.redirect('/goal/' + goalId);
+    response.redirect('/dashboard/' );
   },
   
 
