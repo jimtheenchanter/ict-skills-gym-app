@@ -52,4 +52,4 @@ const goal = {
 
  
 
-module.exports = assessment;
+module.exports = goal;

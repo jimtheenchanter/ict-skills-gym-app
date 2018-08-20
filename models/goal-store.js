@@ -62,4 +62,4 @@ const assessmentStore = {
   },
 };
 
-module.exports = assessmentStore;
+module.exports = goalStore;
