@@ -36,30 +36,7 @@ const assessmentStore = {
     this.store.save();
   },
 
-  addGoal(id, goal) {
-    const assessment = this.getAssessment(id);
-    assessment.goals.push(goal);
-
-   //future date & BMI
-    
-    
-    
-    /* let bmi = 0;
-    for (let i = 0; i < assessment.goal.length; i++) {
-      bmi += assessment.goals[i].weight;
-    }
-
-    assessment.bmi= bmi;
-    */
-    this.store.save();
-  },
-
-  removeGoal(id, goalId) {
-    const assessment = this.getAssessment(id);
-    const goals = assessment.goals;
-    _.remove(goals, { id: goalId});
-    this.store.save();
-  },
+ 
 };
 
 module.exports = assessmentStore;
