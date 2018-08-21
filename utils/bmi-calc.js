@@ -1,13 +1,8 @@
 const logger = require('../utils/logger');
-const accounts = require ('../controllers/accounts');
-const assessment = require('../controllers/assessment');
 const bmiCalc = {
   calculateBmi(member, weight){
     logger.info(member, weight);
-    
     let bmiValue = Math.round(Number(weight)/(Number(member.height) * Number(member.height)));
-    // let bmiValue = Math.round((member.startingweight)/((member.height) * (member.height)))
-   
     return bmiValue;
   },
   
@@ -41,9 +36,7 @@ const bmiCalc = {
             if((idealWeight > assessment.weight - 0.2) && (idealWeight < assessment.weight + 0.2)){
                 return true;
             }
-        }else if(member.gender == "F"  member.gender == "Unspecified"
-                )
-        {
+        }else if(member.gender == "F"  || member.gender == "Unspecified"){
             if(member.getHeight() > 1.524 ){
                 idealWeight = (45.5 + (((member.getHeight()-1.524)/0.0254) * 2.3));
             }
