@@ -1,4 +1,7 @@
 const logger = require('../utils/logger');
+const assessment = require('../controllers/assessment');
+const memberStore = require('../models/member-store');
+const assessmentStore = require ('../models/assessment-store');
 
 const bmiCalc = {
   calculateBmi(member, weight){
