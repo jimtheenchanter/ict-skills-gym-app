@@ -3,7 +3,10 @@ const assessment = require('../controllers/assessment');
 const bmiCalc = {
   calculateBmi(member, weight){
     logger.info(member, weight);
-    let bmiValue = Math.round(Number(weight)/(Number(member.height) * Number(member.height)));
+    
+    // let bmiValue = Math.round(Number(weight)/(Number(member.height) * Number(member.height)))
+    let bmiValue = Math.round((member.weight)/((member.height) * (member.height)))
+   ;
     return bmiValue;
   },
   
