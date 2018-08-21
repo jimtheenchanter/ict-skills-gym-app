@@ -17,10 +17,10 @@ const dashboard = {
     const loggedInMember = accounts.getCurrentMember(request);
     const viewData = {
       title: 'Dashboard',
-      assessments: assessmentStore.getMemberAssessments(loggedInMember.memberId),
-      firstName: memberStore.getMemberById(loggedInMember, loggedInMember.firstName),
+      assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
+      firstName: memberStore.getMemberById(loggedInMember.firstName),
       bmiCategory: bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
-      bmi: bmiCalc.calculateBmi(),
+      // bmi: bmiCalc.calculateBmi(loggedInMember.weight, loggedInMember.height),
       goals: goalStore.getMemberGoals(loggedInMember.id),
       
     };
@@ -50,7 +50,7 @@ const dashboard = {
       chest: request.body.chest,
       waist: request.body.waist,
       hips: request.body.hips,
-      latestBmi: bmiCalc.calculateBmi,
+      bmi:  bmiCalc.calculateBmi
     };
     logger.debug('Creating a new Assessment', newAssessment);
     assessmentStore.addAssessment(newAssessment);

@@ -52,7 +52,7 @@ const accounts = {
   },
 
   getCurrentMember(request) {
-    const memberEmail = request.cookies.members;
+    const memberEmail = request.cookies.gym;
     return memberstore.getMemberByEmail(memberEmail);
   },
   

@@ -8,7 +8,7 @@ const bmicalc = require('../utils/bmi-calc');
 
 
 //dashboard object
-const trainerDashboard = {
+const dashboard = {
   index(request, response) {
     logger.info('dashboard rendering');
     const listAllMembers = memberStore.getAllMembers(request);
@@ -28,9 +28,25 @@ const trainerDashboard = {
     logger.debug(`Deleting member${memberId}`);
     memberStore.removeAssessment(memberId);
     response.redirect('/dashboard');
-  }
+  },
   
- 
+  addGoals(request, response) {
+    const loggedInMember = accounts.getCurrentMember(request); //find out the current member
+    const newAssessment = {
+      id: uuid(),
+      memberid: loggedInMember.id,  //all assessments will have an ID of user
+      weight: request.body.weight,
+      thigh: request.body.thigh,
+      upperarm: request.body.upperarm,
+      chest: request.body.chest,
+      waist: request.body.waist,
+      hips: request.body.hips
+       
+    };
+    logger.debug('Creating a new Assessment', newAssessment);
+    memberStore.addAssessment(newAssessment);
+    response.redirect('/dashboard');
+  },
   
 
 
