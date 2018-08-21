@@ -50,7 +50,7 @@ const dashboard = {
       chest: request.body.chest,
       waist: request.body.waist,
       hips: request.body.hips,
-      bmi:  bmiCalc.calculateBmi
+      bmi:  assessmentStore.finalBmi
     };
     logger.debug('Creating a new Assessment', newAssessment);
     assessmentStore.addAssessment(newAssessment);
