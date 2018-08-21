@@ -60,6 +60,36 @@
       "chest": "22",
       "waist": "22",
       "hips": "2"
+    },
+    {
+      "id": "c0104a79-9a3b-40f6-816b-d21ca05da16b",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "weight": "45",
+      "thigh": "45",
+      "upperarm": "45",
+      "chest": "45",
+      "waist": "45",
+      "hips": "45"
+    },
+    {
+      "id": "7db27f66-9c18-49dd-9805-2164a997b6f9",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "weight": "56",
+      "thigh": "56",
+      "upperarm": "56",
+      "chest": "56",
+      "waist": "56",
+      "hips": "56"
+    },
+    {
+      "id": "6147eca1-e275-4f62-9ed8-b31bf42be6fc",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "weight": "45",
+      "thigh": "45",
+      "upperarm": "45",
+      "chest": "45",
+      "waist": "45",
+      "hips": "45"
     }
   ]
 }

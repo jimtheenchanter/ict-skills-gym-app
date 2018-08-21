@@ -18,9 +18,9 @@ const dashboard = {
     const viewData = {
       title: 'Dashboard',
       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
-      firstName: memberStore.getMemberById(loggedInMember.firstName),
+      firstName: memberStore.getMemberById(loggedInMember, loggedInMember.firstName),
       bmiCategory: bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
-      // bmi: assessmentStore.finalBmi,
+      bmi: bmiCalc.calculateBmi(),
       goals: goalStore.getMemberGoals(loggedInMember.id),
       
     };
