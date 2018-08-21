@@ -17,6 +17,7 @@ const dashboard = {
     const viewData = {
       title: 'Dashboard',
       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
+      firstName: loggedInMember.firstName,
       bmiCategory: bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
       bmi: bmiCalc.bmiValue,
       goals: goalStore.getMemberGoals(loggedInMember.id),
@@ -49,7 +50,7 @@ const dashboard = {
       chest: request.body.chest,
       waist: request.body.waist,
       hips: request.body.hips,
-      bmi:  bmiCalc.bmiValue
+      bmi:  bmiCalc.calculateBmi
     };
     logger.debug('Creating a new Assessment', newAssessment);
     assessmentStore.addAssessment(newAssessment);
