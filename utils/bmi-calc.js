@@ -1,12 +1,13 @@
 const logger = require('../utils/logger');
+const accounts = require ('../controllers/accounts');
 const assessment = require('../controllers/assessment');
 const bmiCalc = {
   calculateBmi(member, weight){
     logger.info(member, weight);
-    
-    let bmiValue = Math.round(Number(weight)/(Number(member.height) * Number(member.height)))
+     const loggedInMember = accounts.getCurrentMember(member);
+    let bmiValue = Math.round(Number(weight)/(Number(member.height) * (Number(member.height))));
     // let bmiValue = Math.round((member.startingweight)/((member.height) * (member.height)))
-   ;
+   
     return bmiValue;
   },
   
