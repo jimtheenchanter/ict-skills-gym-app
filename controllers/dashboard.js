@@ -20,7 +20,7 @@ const dashboard = {
       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
       firstName: memberStore.getMemberById(loggedInMember.firstName),
       bmiCategory: bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
-      // bmi: bmiCalc.calculateBmi(loggedInMember.weight, loggedInMember.height),
+      bmi: bmiCalc.calculateBmi(loggedInMember.bmiValue),
       goals: goalStore.getMemberGoals(loggedInMember.id),
       
     };

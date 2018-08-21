@@ -1,5 +1,5 @@
 const logger = require('../utils/logger');
-const aseess
+const assessment = require('../controllers/assessment');
 const bmiCalc = {
   calculateBmi(member, weight){
     logger.info(member, weight);
