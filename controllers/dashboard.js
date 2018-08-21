@@ -18,13 +18,13 @@ const dashboard = {
     const viewData = {
       title: 'Dashboard',
       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
-      
-      // firstName: loggedInMember.firstName,
+      firstName: memberStore.getMemberById(loggedInMember.firstName),
       bmiCategory: bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
-      // bmi: bmiCalc.calculateBmi(loggedInMember.member, loggedInMember.startingweight),
-      goals: goalStore.getMemberGoals(loggedInMember.id)
+      // bmi: bmiCalc.calculateBmi(loggedInMember.weight, loggedInMember.height),
+      goals: goalStore.getMemberGoals(loggedInMember.id),
       
     };
+    
     
     logger.info("number please",viewData);
     logger.info('about to render', assessmentStore.getAllAssessments());
