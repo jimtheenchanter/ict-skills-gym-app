@@ -12,6 +12,13 @@
       "targetdate": "2019-05-01",
       "desired": "44",
       "bmi": null
+    },
+    {
+      "id": "72241868-e044-4beb-875d-be0e09604085",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "targetdate": "2019-05-01",
+      "desired": "45",
+      "bmi": null
     }
   ]
 }
