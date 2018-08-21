@@ -1,4 +1,5 @@
 const logger = require('../utils/logger');
+const aseess
 const bmiCalc = {
   calculateBmi(member, weight){
     logger.info(member, weight);

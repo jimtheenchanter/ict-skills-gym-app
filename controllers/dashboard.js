@@ -44,6 +44,7 @@ const dashboard = {
     const newAssessment = {
       id: uuid(),
       memberid: loggedInMember.id,  //all assessments will have an ID of user
+      date: new Date(),
       weight: request.body.weight,
       thigh: request.body.thigh,
       upperarm: request.body.upperarm,
