@@ -2,7 +2,6 @@
 
 const logger = require('../utils/logger');
 const assessmentStore = require('../models/assessment-store');
-const memberStore = require('../models/member-store');
 const uuid = require('uuid');
 const bmiCalc = require('../utils/bmi-calc');
 //LET BMI CATEGORY = BMICALC.NAMEoFmETHOD(USERPARAMS);
@@ -29,7 +28,6 @@ const assessment = {
 
     var finalBmi = weight/(height/100*height/100)
   }
-    return finalBmi
   },
 };
 
