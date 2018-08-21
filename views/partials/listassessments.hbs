@@ -9,6 +9,7 @@
       <th>Chest</th>
       <th>Waist</th>
       <th>Hips</th>
+      <th>BMI</th>
     </tr>
   </thead>
   <tbody>
@@ -31,6 +32,9 @@
         </td>
         <td>
           {{hips}}
+        </td>
+        <td>
+          {{assessment.calculateBmi}}
         </td>
         <td>
           <a href="/dashboard/deleteassessment/{{id}}" class="ui icon button">
