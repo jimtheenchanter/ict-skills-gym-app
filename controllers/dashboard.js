@@ -6,7 +6,6 @@ const assessmentStore = require('../models/assessment-store');
 const memberStore = require('../models/member-store');
 const goalStore = require('../models/goal-store');
 const uuid = require('uuid');
-
 const bmiCalc = require('../utils/bmi-calc');
 
 
@@ -18,9 +17,8 @@ const dashboard = {
     const viewData = {
       title: 'Dashboard',
       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
-      firstName: memberStore.getMemberById(loggedInMember.firstName),
       bmiCategory: bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
-      bmi: bmiCalc.calculateBmi(loggedInMember.bmiValue),
+      bmi: bmiCalc.bmiValue,
       goals: goalStore.getMemberGoals(loggedInMember.id),
       
     };
@@ -51,7 +49,7 @@ const dashboard = {
       chest: request.body.chest,
       waist: request.body.waist,
       hips: request.body.hips,
-      bmi:  bmiCalc.calculateBmi
+      bmi:  bmiCalc.bmiValue
     };
     logger.debug('Creating a new Assessment', newAssessment);
     assessmentStore.addAssessment(newAssessment);

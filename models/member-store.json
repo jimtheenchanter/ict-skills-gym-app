@@ -8,7 +8,7 @@
       "address": "Springfield, KN",
       "gender": "M",
       "height": "1.6",
-      "startingweight": "85",
+      "startingweight": "1000",
       "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
       
     },
@@ -21,7 +21,7 @@
       "address": "Springfield, KN",
       "gender": "F",
       "height": "1.8",
-      "startingweight": "70",
+      "startingweight": "20",
       "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
      
     }
