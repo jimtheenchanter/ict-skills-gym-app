@@ -22,5 +22,5 @@ const routes = require('./routes');
 app.use('/', routes);
 
 const listener = app.listen(process.env.PORT || 4000, function () {
-  logger.info(`The Only Gym I Know started on port ${listener.address().port}`);
+  logger.info(`This Must Be The Gym started on port ${listener.address().port}`);
 });

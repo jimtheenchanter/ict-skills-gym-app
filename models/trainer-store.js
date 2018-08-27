@@ -27,7 +27,7 @@ const trainerStore = {
     },
 
     getTrainerByPassword(password) {
-        return this.storefindOneBy(this.collection, { password: password });
+        return this.store.findOneBy(this.collection, { password: password });
     },
 
 

@@ -28,8 +28,8 @@ const bmiCalc = {
     
     let idealWeight;
         if(member.gender == "M"){
-            if(member.getHeight() > 1.524 ){
-                idealWeight = (50 + (((member.getHeight()-1.524)/0.0254) * 2.3));
+            if(member.height > 1.524 ){
+                idealWeight = (50 + (((member.height-1.524)/0.0254) * 2.3));
             }else{
                 idealWeight = 50;
             }
@@ -40,8 +40,8 @@ const bmiCalc = {
                  || member.gender == "Unspecified"
                 )
         {
-            if(member.getHeight() > 1.524 ){
-                idealWeight = (45.5 + (((member.getHeight()-1.524)/0.0254) * 2.3));
+            if(member.height > 1.524 ){
+                idealWeight = (45.5 + (((member.height-1.524)/0.0254) * 2.3));
             }
             else{
                 idealWeight = 45.5;

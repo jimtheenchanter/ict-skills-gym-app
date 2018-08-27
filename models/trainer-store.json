@@ -4,7 +4,7 @@
       "firstName": "john",
       "lastName": "trainer",
       "email": "john@trainer.com",
-      "password": "secret",
+      "password": "secret"
      
     },
     
@@ -12,7 +12,7 @@
       "firstName": "jane",
       "lastName": "trainer",
       "email": "jane@trainer.com",
-      "password": "secret",
+      "password": "secret"
     }
   ]
 }

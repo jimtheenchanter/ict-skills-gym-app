@@ -1,7 +1,7 @@
 {{> welcomemenu id="signup"}}
 
 <form class="ui stacked segment form" action="/register" method="POST">
-  <h3 class="ui dividing header">Register</h3>
+  <h3 class="ui dividing header">Register New Menu</h3>
    <h4 class="ui header">Personal Details</h4>
   <div class="two fields">
     <div class="field">
@@ -24,28 +24,44 @@
       <input type="password" name="password">
     </div>
   </div>
+
+    <div class="field">
+
+        <label> Address</label>
+        <input placeholder="Address" type="text" name="address">
+    </div>
+
   
   <div class="three fields">
+
      <div class="field">
-       <label>State</label>
-      <select class="ui fluid dropdown">
-        <option value="">Gender</option>
-    <option value="F">Female</option>
-    <option value="M">Male</option>
-       </select>    
-       </div>
-  <div class="field">
-    <label>Height (centimetres)</label>
-    <input placeholder ="175" type="number" name="height">
-      </div>
-  <div class="field">
-    <label>Weight (kgs)</label>
-    <input placeholder ="69" type="number" name="startingweight">
-  
+       <label>Gender</label>
+
+
+         <label>
+             <select class="ui fluid dropdown"  type="hidden" name="gender">>
+
+                 <option value="">Select Gender</option>
+                 <option value="F">Female</option>
+                 <option value="M">Male</option>
+
+             </select>
+         </label>
+
+     </div>
+
+     <div class="field">
+       <label>Height (centimetres)</label>
+       <input placeholder ="175" type="number" name="height">
+         </div>
+
+      <div class="field">
+        <label>Weight (kgs)</label>
+        <input placeholder ="69" type="number" name="startingweight">
+    </div>
+
   </div>
-  </div>
-  
-  
-  <h4 class="ui header">Assessment Details</h4>
-  <button class="ui blue submit button">Submit</button>
+
+
+    <button class="ui blue submit button" >Submit</button>
 </form>

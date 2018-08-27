@@ -16,6 +16,8 @@ const memberStore = {
 
   addMember(member) {
     this.store.add(this.collection, member);
+      this.store.save();
+
   },
 
   getMemberById(id) {
@@ -25,10 +27,20 @@ const memberStore = {
   getMemberByEmail(email) {
     return this.store.findOneBy(this.collection, { email: email });
   },
-  
+
+  getHeight(height){
+    return this.store.findBy(this.collection, {height: height});
+  } ,
+
   getMemberByPassword(password) {
-    return this.storefindOneBy(this.collection, { password: password });
-  }
+    return this.store.findOneBy(this.collection, { password: password });
+  },
+
+  remove(id) {
+    const member = this.getMemberById(id);
+    this.store.remove(this.collection, member);
+    this.store.save();
+    }
 };
 
 module.exports = memberStore;

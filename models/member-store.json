@@ -1,30 +1,51 @@
 {
   "members": [
     {
-      "firstName": "homer",
-      "lastName": "simpson",
+      "firstName": "Homer",
+      "lastName": "Simpson",
       "email": "homer@simpson.com",
       "password": "secret",
       "address": "Springfield, KN",
       "gender": "M",
       "height": "1.6",
-      "startingweight": "85",
-      "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
-      
+      "startingweight": "80",
+      "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "_locals": {}
     },
-    
     {
-      "firstName": "marge",
-      "lastName": "simpson",
+      "firstName": "Marge",
+      "lastName": "Simpson",
       "email": "marge@simpson.com",
       "password": "secret",
       "address": "Springfield, KN",
       "gender": "F",
       "height": "1.8",
       "startingweight": "70",
-      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
-     
+      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "_locals": {}
+    },
+    {
+      "firstName": "Bart",
+      "lastName": "Simpson",
+      "email": "bart@simpson.com",
+      "password": "secret",
+      "address": "Springfield, KN",
+      "gender": "M",
+      "height": "1.2",
+      "startingweight": "48",
+      "id": "3ad52697-6d98-4d80-8273-084de5aa06b9",
+      "_locals": {}
+    },
+    {
+      "firstName": "Jim",
+      "lastName": "OBRien",
+      "email": "jim@obrien.com",
+      "password": "secret",
+      "address": "Bedroom 2",
+      "gender": "M",
+      "height": "175",
+      "startingweight": "69",
+      "id": "5177dfeb-2dc6-4e07-80fb-c924a660340b"
     }
   ]
 }
-

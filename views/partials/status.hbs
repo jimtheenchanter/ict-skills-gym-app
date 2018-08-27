@@ -1,40 +1,37 @@
 
-<section class="ui raised segment">
-<table class="ui table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th><i class="male icon"></i></th>
-      <th><i class="heartbeat icon"></i>BMI Category</th>
-      <th>BMI</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    
-      <tr>
-        <td>
-          {{firstName}}
-        </td>
-        <td>
-          
-        </td>
-        <td>
-          {{bmiCategory}}
-        </td>
-          <td>
-          {{bmiCalc}}
-        </td>
-        <td>
-         
-        </td>
-        <td>
-        
-        </td>
-       
-      </tr>
-   
-  </tbody>
-</table>
+<section class="ui segment">
+    <div class="ui four small statistics">
+        <div class="ui statistic">
+            <div class="value">
+                <i class="user icon"></i>
+            </div>
+            <div class="label">
+                {{member.firstName}}
+            </div>
+        </div>
+        <div class="ui statistic">
+            <div class="value">
+              {{isIdeal}}
+            </div>
+            <div class="label">
+                Ideal Weight Indicator
+            </div>
+        </div>
+        <div class="ui statistic">
+            <div class="value">
+                <i class="heartbeat icon"></i> {{bmi}}
+            </div>
+            <div class="label">
+                BMI
+            </div>
+        </div>
+        <div class="ui statistic">
+            <div class="value">
+                <i class="doctor icon"></i>
+            </div>
+            <div class="label">
+               {{bmiCategory}}
+            </div>
+        </div>
+    </div>
 </section>

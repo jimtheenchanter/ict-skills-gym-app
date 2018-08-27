@@ -31,6 +31,18 @@ const assessmentStore = {
     this.store.save();
   },
 
+   removeMemberAssessments(mId){
+       const assessments = this.store.findBy(this.collection, { memberid: mId });
+       this.store.remove(this.collection,assessments);
+       this.store.save();
+   },
+
+   addComment(id,comment){
+       const assessment = this.getAssessment(id);
+       assessment.comment = comment;
+       this.store.save();
+   },
+
   removeAllAssessments() {
     this.store.removeAll(this.collection);
     this.store.save();
