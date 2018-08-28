@@ -61,7 +61,6 @@ const trainerDashboard = {
             assessments: assessmentStore.getMemberAssessments(member.id),
             member: member,
             bmiCategory: bmiCalc.determineCategory(bmiCalc.calculateBmi(member,member.startingweight)),
-            // bmi: bmiCalc.calculateBmi(loggedInMember.weight, loggedInMember.height),
             goals: goalStore.getMemberGoals(member.id),
             bmi: bmiCalc.calculateBmi(member,member.startingweight)
         };
@@ -87,7 +86,6 @@ const trainerDashboard = {
     response.redirect('/dashboard');
   },
   
-
 
 };
   module.exports = trainerDashboard;

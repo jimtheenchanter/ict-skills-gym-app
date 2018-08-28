@@ -29,7 +29,6 @@ router.get('/dashboard/deletegoal/:id', dashboard.deleteGoal);
 router.post('/accounts/updateAccount', accounts.updateAccount);
 router.get('/trainerdash/deleteMember/:id', trainerdashboard.deleteMember);
 router.get('/trainerdash/:id', trainerdashboard.showMember);
-
 router.post('/trainerdash/addcomment/', trainerdashboard.addComment);
 
 router.get('/about', about.index);
