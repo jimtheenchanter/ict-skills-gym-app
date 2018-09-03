@@ -3,7 +3,9 @@
     <div class="ui four small statistics">
         <div class="ui statistic">
             <div class="value">
-                <i class="user icon"></i>
+
+                <i class=" user icon"></i>
+
             </div>
             <div class="label">
                 {{member.firstName}}
@@ -11,7 +13,11 @@
         </div>
         <div class="ui statistic">
             <div class="value">
-              {{isIdeal}}
+                {{# if isIdeal}}
+                    <i class="green dashboard icon"></i>
+                {{else}}
+                    <i class="red dashboard icon"></i>
+                {{/if}}
             </div>
             <div class="label">
                 Ideal Weight Indicator

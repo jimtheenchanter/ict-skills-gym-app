@@ -44,18 +44,6 @@
       "date": "2018-08-23T16:56:46.711Z"
     },
     {
-      "id": "cac87697-dd63-4871-8fed-569674246d7b",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "weight": "45",
-      "thigh": "45",
-      "upperarm": "45",
-      "chest": "45",
-      "waist": "45",
-      "hips": "45",
-      "date": "2018-08-23T16:57:51.641Z",
-      "comment": "Great"
-    },
-    {
       "id": "70f61552-97cd-453f-b967-ef2ca83d6c1d",
       "memberid": "5eabfa31-6b12-408b-8b1a-e6286fda2c65",
       "weight": "50",
@@ -65,18 +53,6 @@
       "waist": "50",
       "hips": "50",
       "date": "2018-08-23T20:48:19.466Z"
-    },
-    {
-      "id": "43ffc14c-8a5c-4b22-a87f-2c011a7ae7e4",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "weight": "45",
-      "thigh": "45",
-      "upperarm": "45",
-      "chest": "45",
-      "waist": "45",
-      "hips": "45",
-      "date": "2018-08-23T20:51:23.120Z",
-      "comment": "Overachiever"
     },
     {
       "id": "acea8b30-19ed-4ee9-b8b1-a0befee4ce38",
@@ -178,18 +154,6 @@
       "date": "2018-08-26T14:15:23.643Z"
     },
     {
-      "id": "62a3f0f5-64a7-4cb4-821f-48e1710086d7",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "weight": "45",
-      "thigh": "78",
-      "upperarm": "78",
-      "chest": "78",
-      "waist": "78",
-      "hips": "78",
-      "date": "2018-08-27T20:06:30.327Z",
-      "comment": "Filthy animal."
-    },
-    {
       "id": "17da3fc4-2476-4c47-b8fc-a826d0c934e3",
       "memberid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
       "weight": "55",
@@ -264,7 +228,240 @@
       "chest": "55",
       "waist": "55",
       "hips": "55",
-      "date": "2018-08-27T23:19:17.129Z"
+      "date": "2018-08-27T23:19:17.129Z",
+      "comment": "Very quick"
+    },
+    {
+      "id": "051e845d-f51d-4213-8a83-7fc3e4494376",
+      "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "weight": "85",
+      "thigh": "45",
+      "upperarm": "45",
+      "chest": "45",
+      "waist": "45",
+      "hips": "45",
+      "date": "2018-08-29T14:29:49.489Z"
+    },
+    {
+      "id": "40e0189f-30c3-421a-85e3-7b6324c2c8ed",
+      "memberid": "3ad52697-6d98-4d80-8273-084de5aa06b9",
+      "weight": "85",
+      "thigh": "55",
+      "upperarm": "55",
+      "chest": "55",
+      "waist": "55",
+      "hips": "55",
+      "date": "2018-08-29T15:00:28.237Z",
+      "comment": "SLower\r\n"
+    },
+    {
+      "weight": "69",
+      "chest": "02",
+      "thigh": "02",
+      "upperarm": "02",
+      "waist": "02",
+      "hips": "02",
+      "id": "743e83bc-6527-4d7e-92dc-95d588ad33da",
+      "date": "2018-08-30 11:34:00",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0"
+    },
+    {
+      "id": "fb0ca995-bbfa-4bd9-a960-811bfaed6a3f",
+      "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "weight": "69",
+      "thigh": "58",
+      "upperarm": "58",
+      "chest": "58",
+      "waist": "58",
+      "hips": "58",
+      "date": "2018-08-30T21:27:29.903Z"
+    },
+    {
+      "id": "90b2a749-878c-42fa-b417-d13a597f1a54",
+      "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "weight": "100",
+      "thigh": "45",
+      "upperarm": "45",
+      "chest": "45",
+      "waist": "45",
+      "hips": "45",
+      "date": "2018-08-30T21:30:56.600Z"
+    },
+    {
+      "id": "f23ff91e-de64-4cbf-863d-5333c494630e",
+      "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "weight": "69",
+      "thigh": "50",
+      "upperarm": "50",
+      "chest": "05",
+      "waist": "50",
+      "hips": "50",
+      "date": "2018-08-30T21:32:12.362Z"
+    },
+    {
+      "id": "efcc711a-28cb-497c-93d4-93050d3a6267",
+      "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "weight": "60",
+      "thigh": "01",
+      "upperarm": "01",
+      "chest": "01",
+      "waist": "01",
+      "hips": "01",
+      "date": "2018-08-30T21:35:14.538Z"
+    },
+    {
+      "id": "a5cd6b56-f96d-4fa6-af0b-38f4b78a49f4",
+      "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "weight": "70",
+      "thigh": "05",
+      "upperarm": "05",
+      "chest": "05",
+      "waist": "05",
+      "hips": "05",
+      "date": "2018-08-30T21:35:28.622Z"
+    },
+    {
+      "id": "94d3b3c1-1561-497a-9b32-4602c888fb87",
+      "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "weight": "71",
+      "thigh": "50",
+      "upperarm": "50",
+      "chest": "50",
+      "waist": "50",
+      "hips": "50",
+      "date": "2018-08-30T21:35:37.990Z"
+    },
+    {
+      "id": "6bebc048-0838-40e8-8dc5-ee39dd1d3e12",
+      "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "weight": "72",
+      "thigh": "50",
+      "upperarm": "50",
+      "chest": "50",
+      "waist": "50",
+      "hips": "50",
+      "date": "2018-08-30T21:35:45.163Z"
+    },
+    {
+      "id": "5d1e50af-af45-40d9-9aac-ab365c5621a5",
+      "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "weight": "73",
+      "thigh": "05",
+      "upperarm": "05",
+      "chest": "05",
+      "waist": "05",
+      "hips": "05",
+      "date": "2018-08-30T21:35:54.740Z"
+    },
+    {
+      "id": "77a46aff-ef23-4d13-b6cb-54fbfc65f5cd",
+      "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "weight": "74",
+      "thigh": "50",
+      "upperarm": "50",
+      "chest": "50",
+      "waist": "50",
+      "hips": "50",
+      "date": "2018-08-30T21:36:42.058Z"
+    },
+    {
+      "id": "2f850619-1a4d-4b43-b264-f805495a4bcb",
+      "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "weight": "75",
+      "thigh": "75",
+      "upperarm": "75",
+      "chest": "75",
+      "waist": "75",
+      "hips": "75",
+      "date": "2018-08-30T21:36:48.531Z"
+    },
+    {
+      "id": "b72525e9-c28e-4acd-b363-f3c98b64f7d6",
+      "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "weight": "76",
+      "thigh": "76",
+      "upperarm": "76",
+      "chest": "76",
+      "waist": "76",
+      "hips": "76",
+      "date": "2018-08-30T21:37:00.442Z"
+    },
+    {
+      "id": "f4ad03e4-db12-41f5-a0f1-d73aa1be9ea2",
+      "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "weight": "77",
+      "thigh": "77",
+      "upperarm": "77",
+      "chest": "77",
+      "waist": "77",
+      "hips": "77",
+      "date": "2018-08-30T21:37:12.995Z"
+    },
+    {
+      "id": "0edbdf15-c9d0-40e1-94c4-404c1d1b4e08",
+      "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "weight": "78",
+      "thigh": "78",
+      "upperarm": "78",
+      "chest": "78",
+      "waist": "78",
+      "hips": "78",
+      "date": "2018-08-30T21:37:21.631Z"
+    },
+    {
+      "id": "f3faa971-5409-46f2-8cbb-90964546a4e3",
+      "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "weight": "100",
+      "thigh": "20",
+      "upperarm": "20",
+      "chest": "20",
+      "waist": "20",
+      "hips": "20",
+      "date": "2018-08-30T21:40:31.711Z"
+    },
+    {
+      "id": "f7076456-831b-4ee2-8a36-9b6c8fd347b9",
+      "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "weight": "69",
+      "thigh": "20",
+      "upperarm": "20",
+      "chest": "20",
+      "waist": "20",
+      "hips": "20",
+      "date": "2018-08-30T21:48:46.272Z"
+    },
+    {
+      "id": "fb805254-fbdd-4fc4-bb2e-50c6e62207d9",
+      "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "weight": "70",
+      "thigh": "80",
+      "upperarm": "80",
+      "chest": "80",
+      "waist": "80",
+      "hips": "80",
+      "date": "2018-08-30T21:49:35.782Z"
+    },
+    {
+      "id": "5d2a3f31-3309-4371-81fc-8e48c283ea3b",
+      "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "weight": "71",
+      "thigh": "50",
+      "upperarm": "50",
+      "chest": "50",
+      "waist": "50",
+      "hips": "50",
+      "date": "2018-08-30T21:49:51.776Z"
+    },
+    {
+      "id": "ad01b5a1-ef69-457b-88f8-c0953b35ebfe",
+      "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "weight": "75",
+      "thigh": "75",
+      "upperarm": "75",
+      "chest": "75",
+      "waist": "75",
+      "hips": "75",
+      "date": "2018-08-30T21:50:21.838Z"
     }
   ]
 }

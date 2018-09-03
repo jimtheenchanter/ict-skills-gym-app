@@ -38,14 +38,16 @@
     },
     {
       "firstName": "Jim",
-      "lastName": "OBRien",
+      "lastName": "O'Brien",
       "email": "jim@obrien.com",
       "password": "secret",
       "address": "Bedroom 2",
       "gender": "M",
-      "height": "175",
+      "height": "1.8",
       "startingweight": "69",
-      "id": "5177dfeb-2dc6-4e07-80fb-c924a660340b"
+      "id": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
+      "_locals": {}
     }
+
   ]
 }

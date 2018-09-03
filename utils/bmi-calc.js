@@ -24,9 +24,9 @@ const bmiCalc = {
         return bmiCategory;
   },
 
-  isIdealBodyWeight(member, assessment){
-    
-    let idealWeight;
+    isIdealBodyWeight(member, assessment){
+
+        let idealWeight;
         if(member.gender == "M"){
             if(member.height > 1.524 ){
                 idealWeight = (50 + (((member.height-1.524)/0.0254) * 2.3));
@@ -36,10 +36,7 @@ const bmiCalc = {
             if((idealWeight > assessment.weight - 0.2) && (idealWeight < assessment.weight + 0.2)){
                 return true;
             }
-        }else if(member.gender == "F"  
-                 || member.gender == "Unspecified"
-                )
-        {
+        }else if(member.gender == "F")        {
             if(member.height > 1.524 ){
                 idealWeight = (45.5 + (((member.height-1.524)/0.0254) * 2.3));
             }
@@ -50,7 +47,7 @@ const bmiCalc = {
                 return true;
         }
         return false;
-  }
+    }
 
 }
 

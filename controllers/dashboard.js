@@ -10,28 +10,71 @@ const uuid = require('uuid');
 const bmiCalc = require('../utils/bmi-calc');
 
 
-//dashboard object
+//dashboard object to retrieve current user and retrieve and assemble data from the model classes
+// const dashboard = {
+//   index(request, response) {
+//     logger.info('dashboard rendering');
+//    const loggedInMember = accounts.getCurrentMember(request);
+//     const viewData = {
+//       title: 'Dashboard',
+//       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
+//       member: memberStore.getMemberById(loggedInMember.id),
+//       bmiCategory: bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
+//       goals: goalStore.getMemberGoals(loggedInMember.id),
+//       bmi: bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight),
+//       isIdeal: bmiCalc.isIdealBodyWeight(loggedInMember, loggedInMember.startingweight),
+//       isMember:true,
+//       gender: memberStore.getGender(loggedInMember.gender),
+//     };
+//
+//     // logger.info("number please",viewData);
+//     logger.info('about to render', assessmentStore.getAllAssessments());
+//     logger.info('about to render', goalStore.getAllGoals());
+//     response.render('dashboard', viewData);
+//   },
+
+
 const dashboard = {
-  index(request, response) {
-    logger.info('dashboard rendering');
-   const loggedInMember = accounts.getCurrentMember(request);
-    const viewData = {
-      title: 'Dashboard',
-      assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
-      member: memberStore.getMemberById(loggedInMember.id),
-      bmiCategory: bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
-      goals: goalStore.getMemberGoals(loggedInMember.id),
-      bmi: bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight),
-      isIdeal: bmiCalc.isIdealBodyWeight(loggedInMember, loggedInMember.startingweight),
-      isMember:true
-    };
-    
-    // logger.info("number please",viewData);
+    index(request, response) {
+        logger.info('dashboard rendering');
+        const loggedInMember = accounts.getCurrentMember(request);
+        let bmiVar = '';
+        if (assessmentStore.getMemberAssessments.length == 0) {
+            logger.info("start")
+            bmiVar = bmiCalc.calculateBmi(loggedInMember, loggedInMember.startingweight);
+        } else {
+            logger.info("latest assessment", bmiCalc.calculateBmi(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id)))
+            bmiVar = bmiCalc.calculateBmi(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id))
+        }
+
+        let bmiCat = '';
+        if (assessmentStore.getMemberAssessments.length == 0) {
+            logger.info("categorising BMI")
+            bmiCat = bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember, loggedInMember.startingweight));
+        } else {
+            bmiCat = bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id)))
+        }
+        // return bmiCat;
+
+
+        const viewData = {
+            title: 'Dashboard',
+            assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
+            member: memberStore.getMemberById(loggedInMember.id),
+            // bmiCategory: bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
+            bmiCategory: bmiCat,
+            goals: goalStore.getMemberGoals(loggedInMember.id),
+            bmi: bmiVar,
+            // isIdeal: bmiCalc.isIdealBodyWeight(loggedInMember, loggedInMember.startingweight),
+            isIdeal: Math.round(bmiCalc.isIdealBodyWeight(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id))),
+            isMember:true,
+            gender: memberStore.getGender(loggedInMember.gender),
+        };
+        logger.info("number please",viewData);
     logger.info('about to render', assessmentStore.getAllAssessments());
     logger.info('about to render', goalStore.getAllGoals());
     response.render('dashboard', viewData);
   },
-
 
  deleteAssessment(request, response) {
     const assessmentId = request.params.id;
@@ -78,7 +121,6 @@ const dashboard = {
     goalStore.addGoal(newGoal);
     response.redirect('/dashboard/' );
   },
-  
 
 };
   module.exports = dashboard;
