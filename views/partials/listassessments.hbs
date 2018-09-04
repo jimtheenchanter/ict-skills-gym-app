@@ -1,6 +1,8 @@
 
 <section class="ui raised segment">
-    <table class="ui table">
+    <table class="ui padded table">
+        <div class="title">Completed Assessments</div>
+        <div class="ui divider"></div>
         <thead>
         <tr>
             <th>Weight</th>
@@ -11,6 +13,8 @@
             <th>Hips</th>
             <th>Date</th>
             <th>Trend</th>
+            <th>Trainer's Comments</th>
+            <th>Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -44,18 +48,16 @@
                     {{else}}
                         <i class="red dashboard icon"></i>
                     {{/if}}
-                </tr>
+                </td>
+                <td>
+                    {{comment}}
+                </td>
                 <td>
                     <a href="/dashboard/deleteassessment/{{id}}" class="ui icon button">
                         <i class="icon trash"></i>
                     </a>
                 </td>
-                </tr>
-                 <tr>
-                <td>
-                      Trainer's comment:  {{comment}}
-                        </td>
-                 </tr>
+               </tr>
            {{/each}}
         </tbody>
     </table>

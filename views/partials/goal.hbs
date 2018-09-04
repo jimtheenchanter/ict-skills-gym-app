@@ -1,7 +1,18 @@
-<section class="ui center aligned middle aligned segment"  style="background-color: dimgray;">
-  <h2 class="ui header"><i class="flag checkered icon"></i>Goals
-    
-  </h2>
-  {{> listgoals}}
-  {{> addgoal}} 
-    </section>
+<section class="ui center aligned middle aligned segment"  style="background-color: #3e5e51;">
+
+    <div class="ui padded grid">
+        <div class="sixteen wide column">
+            <h1 style="color:white;">Goals <i class="flag checkered icon"></i></h1></div>
+        <div class="seven wide column">
+
+
+            {{> addgoal}}
+
+        </div>
+     <div class="nine wide column">
+
+          {{> listgoals}}
+     </div>
+
+    </div>
+ </section>

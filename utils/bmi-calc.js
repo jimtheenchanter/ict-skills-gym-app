@@ -2,7 +2,7 @@ const logger = require('../utils/logger');
 const bmiCalc = {
   calculateBmi(member, weight){
     logger.info(member, weight);
-    let bmiValue = Math.round(Number(weight)/(Number(member.height) * Number(member.height)));
+    let bmiValue = parseFloat(Number(weight)/(Number(member.height) * Number(member.height))).toFixed(2);
     return bmiValue;
   },
   
@@ -24,30 +24,33 @@ const bmiCalc = {
         return bmiCategory;
   },
 
-    isIdealBodyWeight(member, assessment){
+    isIdealBodyWeight(member){
 
-        let idealWeight='';
-        if(member.gender == "M"){
-            if(member.height > 1.524 ){
-                idealWeight = (50 + (((member.height-1.524)/0.0254) * 2.3));
-            }else{
-                idealWeight = 50;
-            }
-            if((idealWeight > assessment.weight - 0.2) && (idealWeight < assessment.weight + 0.2)){
-                return true;
-            }
-        }else if(member.gender == "F")        {
-            if(member.height > 1.524 ){
-                idealWeight = (45.5 + (((member.height-1.524)/0.0254) * 2.3));
-            }
-            else{
-                idealWeight = 45.5;
-            }
-            if((idealWeight > assessment.weight - 0.2 && idealWeight < assessment.weight + 0.2))
-                return true;
-        }return false;
 
-    },
+        const fiveFeet = 60.0;
+        let idealBodyWeight="0";
+        let convertMetresToInches = parseFloat(member.height*39.37) ;
+        const inches = convertMetresToInches;
+
+        if (inches <= fiveFeet) {
+            if (member.gender =="M") {
+                idealBodyWeight = 50;
+            } else {
+                idealBodyWeight = 45.5;
+            }
+        } else {
+            if (member.gender =="F") {
+                idealBodyWeight = 50 + ((inches - fiveFeet) * 2.3);
+            } else {
+                idealBodyWeight = 45.5 + ((inches - fiveFeet) * 2.3);
+            }
+        }
+
+
+        return ((idealBodyWeight <= (member.weight + 2.0))
+            && (idealBodyWeight >= (member.weight - 2.0))
+        );
+    }
 
 //    trend   (member, assessment){
 //

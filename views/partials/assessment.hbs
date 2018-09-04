@@ -1,9 +1,24 @@
 
 
-<section class="ui center aligned middle aligned segment"  style="background-color: dimgray;">
-  <h2 class="ui header"><i class="tasks icon"></i>Assessments
+<section class="ui center aligned middle aligned segment"  style="background-color: #3e5e51;">
 
-  </h2>
-  {{> listassessments}}
-  {{> addassessment}} 
+
+    <div class="ui padded grid">
+        <div class="sixteen wide column"><h1 style="color:white;">Assessments <i class="tasks icon"></i></h1></div>
+        <div class="seven wide column">
+
+            {{> addassessment}}
+        </div>
+        <div class="nine wide padded column">
+<h3 style="color:white; text-align:center;">
+    Track your progress as often as you like. Receive live comments from your trainer as you progress. Or regress. It's up to you.
+</h3>
+
+        </div>
+
+  <div class="sixteen wide column">
+
+    {{> listassessments}}
+  </div>
+    </div>
     </section>

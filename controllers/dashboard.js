@@ -9,31 +9,27 @@ const uuid = require('uuid');
 
 const bmiCalc = require('../utils/bmi-calc');
 
-
-
 const dashboard = {
     index(request, response) {
         logger.info('dashboard rendering');
         const loggedInMember = accounts.getCurrentMember(request);
 
-
+                //setting up variables to pass for viewdata using bmiCalc methods
         let bmiVar = '';
         let bmiCat = '';
         let isIdeal = '';
-        if (assessmentStore.getMemberAssessments.length == 0) {
+        if (assessmentStore.getMemberAssessments(loggedInMember.id).length == 0) {
             logger.info("start")
             logger.info("categorising BMI")
             bmiVar = bmiCalc.calculateBmi(loggedInMember, loggedInMember.startingweight);
             bmiCat = bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember, loggedInMember.startingweight));
             isIdeal = bmiCalc.isIdealBodyWeight(loggedInMember, loggedInMember.startingweight);
-
         } else {
             logger.info("latest assessment", bmiCalc.calculateBmi(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id)));
             bmiVar = bmiCalc.calculateBmi(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id));
             bmiCat = bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id)));
             isIdeal = bmiCalc.isIdealBodyWeight(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id));
         }
-
 
         const viewData = {
             title: 'Dashboard',
@@ -50,16 +46,55 @@ const dashboard = {
             // gender: memberStore.getGender(loggedInMember.gender),
         };
         logger.info("number please",viewData);
-    logger.info('about to render', assessmentStore.getAllAssessments());
-    logger.info('about to render', goalStore.getAllGoals());
-    response.render('dashboard', viewData);
-  },
+        logger.info('about to render', assessmentStore.getAllAssessments());
+        logger.info('about to render', goalStore.getAllGoals());
+        response.render('dashboard', viewData);
+    },
 
- deleteAssessment(request, response) {
-    const assessmentId = request.params.id;
-    logger.debug(`Deleting Assessment${assessmentId}`);
-    assessmentStore.removeAssessment(assessmentId);
-    response.redirect('/dashboard');
+// const dashboard = {
+//     index(request, response) {
+//         logger.info('dashboard rendering');
+//         const loggedInMember = accounts.getCurrentMember(request);
+//
+//
+//         let bmiVar = '';
+//         let bmiCat = '';
+//         let isIdealVar = '';
+//         if (assessmentStore.getMemberAssessments.length == 0 || assessmentStore.getMemberAssessments.length == 1) {
+//             logger.info("start")
+//             logger.info("categorising BMI")
+//             bmiVar = bmiCalc.calculateBmi(loggedInMember, loggedInMember.startingweight);
+//             bmiCat = bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember, loggedInMember.startingweight));
+//             isIdealVar = bmiCalc.isIdealBodyWeight(loggedInMember, loggedInMember.startingweight);
+//         } else {
+//             logger.info("latest assessment", bmiCalc.calculateBmi(loggedInMember.id, assessmentStore.getLatestAssessment(loggedInMember.id)));
+//             bmiVar = bmiCalc.calculateBmi(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id));
+//             bmiCat = bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id)));
+//             isIdealVar = bmiCalc.isIdealBodyWeight(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id));
+//         }
+//
+//         const viewData = {
+//             title: 'Dashboard',
+//             assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
+//             member: memberStore.getMemberById(loggedInMember.id),
+//             bmiCategory: bmiCat,
+//             goals: goalStore.getMemberGoals(loggedInMember.id),
+//             bmi: bmiVar,
+//             isIdeal:isIdealVar,
+//             isMember:true,
+//             // gender: memberStore.getGender(loggedInMember.gender),
+//         };
+//         logger.info("number please",viewData);
+//     logger.info('about to render', assessmentStore.getAllAssessments());
+//     logger.info('about to render', goalStore.getAllGoals());
+//     response.render('dashboard', viewData);
+//   },
+
+   deleteAssessment(request, response) {
+       const assessmentId = request.params.id;
+       logger.debug(`Deleting Assessment${assessmentId}`);
+       assessmentStore.removeAssessment(assessmentId);
+       response.redirect('/dashboard');
   },
   
   addAssessment(request, response) {

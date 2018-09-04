@@ -34,7 +34,7 @@ const accounts = {
     response.render('signup', viewData);
   },
 
-  register(request, response) {
+  register(request, response) {  //method to add new member
     const member = request.body;
     member.id = uuid();
     memberstore.addMember(member);
@@ -42,7 +42,7 @@ const accounts = {
     response.redirect('/');
   },
 
-  authenticate(request, response) {
+  authenticate(request, response) {  //method to authenticate login and verify if member or trainer
     const member = memberstore.getMemberByEmail(request.body.email);
     const trainer = trainerstore.getTrainerByEmail(request.body.email);
     if (member) {
@@ -79,6 +79,7 @@ const accounts = {
     member.email =upMember.email =="" ? member.email: upMember.email;
     member.gender = upMember.gender ==""? member.gender: upMember.gender;
     member.height = upMember.height ==""? member.height: upMember.height;
+    member.address = upMember.address == ""? member.height: upMember.height;
     member.startingweight = upMember.startingweight == "" ? member.startingweight: upMember.startingweight;
     response.render('settings',member);
     }

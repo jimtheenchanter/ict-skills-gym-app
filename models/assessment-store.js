@@ -49,15 +49,15 @@ const assessmentStore = {
     this.store.save();
   },
 
-  getLatestAssessment(memberId){
+  getLatestAssessment(memberId){ // to retrieve last assessment
 
-          const assessArray = module.exports.getMemberAssessments(memberId);
-          assessArray.sort(function(a,b){
-              return new Date(b.date) - new Date(a.date);
-          });
-          // logger.info("sending back the latest",assessArray[0].weight)
-          // logger.info("sending back the latest",assessArray[0])
-          return assessArray[0].weight;
+    const assessArray = module.exports.getMemberAssessments(memberId);  //create an array  based on getmemberassessments
+    assessArray.sort(function(a,b){                           //and sort by date
+        return new Date(b.date) - new Date(a.date);
+    });
+    // logger.info("sending back the latest",assessArray[0].weight)
+    // logger.info("sending back the latest",assessArray[0])
+    return assessArray[0].weight;  //retirm the weight of the latest assessment
 
       }
 
