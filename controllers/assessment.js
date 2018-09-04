@@ -20,13 +20,7 @@ const assessment = {
   
    
 
-  calculateBmi(request, response) {
-    var weight = request.params.weight;
-    var height = request.params.height ;
-    if(weight > 0 && height > 0){	
-    var finalBmi = weight/(height/100*height/100)
-    }
-  },
+
 };
 
 module.exports = assessment;

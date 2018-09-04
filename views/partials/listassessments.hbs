@@ -9,8 +9,8 @@
             <th>Chest</th>
             <th>Waist</th>
             <th>Hips</th>
-
             <th>Date</th>
+            <th>Trend</th>
         </tr>
         </thead>
         <tbody>
@@ -39,17 +39,24 @@
                     {{date}}
                 </td>
                 <td>
+                    {{# if higher}}
+                        <i class="green dashboard icon"></i>
+                    {{else}}
+                        <i class="red dashboard icon"></i>
+                    {{/if}}
+                </tr>
+                <td>
                     <a href="/dashboard/deleteassessment/{{id}}" class="ui icon button">
                         <i class="icon trash"></i>
                     </a>
                 </td>
-            </tr>
-        <tr>
-<td>
-          Trainer's comment:  {{comment}}
-</td>
-        </tr>
-        {{/each}}
+                </tr>
+                 <tr>
+                <td>
+                      Trainer's comment:  {{comment}}
+                        </td>
+                 </tr>
+           {{/each}}
         </tbody>
     </table>
 </section>

@@ -10,28 +10,50 @@ const uuid = require('uuid');
 const bmiCalc = require('../utils/bmi-calc');
 
 
-//dashboard object
+
 const dashboard = {
-  index(request, response) {
-    logger.info('dashboard rendering');
-   const loggedInMember = accounts.getCurrentMember(request);
-    const viewData = {
-      title: 'Dashboard',
-      assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
-      member: memberStore.getMemberById(loggedInMember.id),
-      bmiCategory: bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
-      goals: goalStore.getMemberGoals(loggedInMember.id),
-      bmi: bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight),
-      isIdeal: bmiCalc.isIdealBodyWeight(loggedInMember, loggedInMember.startingweight),
-      isMember:true
-    };
-    
-    // logger.info("number please",viewData);
+    index(request, response) {
+        logger.info('dashboard rendering');
+        const loggedInMember = accounts.getCurrentMember(request);
+
+
+        let bmiVar = '';
+        let bmiCat = '';
+        let isIdeal = '';
+        if (assessmentStore.getMemberAssessments.length == 0) {
+            logger.info("start")
+            logger.info("categorising BMI")
+            bmiVar = bmiCalc.calculateBmi(loggedInMember, loggedInMember.startingweight);
+            bmiCat = bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember, loggedInMember.startingweight));
+            isIdeal = bmiCalc.isIdealBodyWeight(loggedInMember, loggedInMember.startingweight);
+
+        } else {
+            logger.info("latest assessment", bmiCalc.calculateBmi(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id)));
+            bmiVar = bmiCalc.calculateBmi(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id));
+            bmiCat = bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id)));
+            isIdeal = bmiCalc.isIdealBodyWeight(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id));
+        }
+
+
+        const viewData = {
+            title: 'Dashboard',
+            assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
+            member: memberStore.getMemberById(loggedInMember.id),
+            // bmiCategory: bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
+            bmiCategory: bmiCat,
+            goals: goalStore.getMemberGoals(loggedInMember.id),
+            bmi: bmiVar,
+            // isIdeal: bmiCalc.isIdealBodyWeight(loggedInMember, loggedInMember.startingweight),
+            // isIdeal: Math.round(bmiCalc.isIdealBodyWeight(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id))),
+            isIdeal:isIdeal,
+            isMember:true,
+            // gender: memberStore.getGender(loggedInMember.gender),
+        };
+        logger.info("number please",viewData);
     logger.info('about to render', assessmentStore.getAllAssessments());
     logger.info('about to render', goalStore.getAllGoals());
     response.render('dashboard', viewData);
   },
-
 
  deleteAssessment(request, response) {
     const assessmentId = request.params.id;
@@ -51,6 +73,7 @@ const dashboard = {
       chest: request.body.chest,
       waist: request.body.waist,
       hips: request.body.hips,
+      higher: 'true',
       date: new Date()
     };
     logger.debug('Creating a new Assessment', newAssessment);   //update dashboard
@@ -78,7 +101,6 @@ const dashboard = {
     goalStore.addGoal(newGoal);
     response.redirect('/dashboard/' );
   },
-  
 
 };
   module.exports = dashboard;

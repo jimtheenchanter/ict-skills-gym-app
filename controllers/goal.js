@@ -19,12 +19,8 @@ const goal = {
   goalTrend(request, response)
   
   { }
- 
 
-
-  
 };
 
- 
 
 module.exports = goal;

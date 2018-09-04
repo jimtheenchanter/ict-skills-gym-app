@@ -32,7 +32,8 @@ const assessmentStore = {
   },
 
    removeMemberAssessments(mId){
-       const assessments = this.store.findBy(this.collection, { memberid: mId });
+       const assessments = this.store.findBy(this.collection, {
+           memberid: mId });
        this.store.remove(this.collection,assessments);
        this.store.save();
    },
@@ -47,6 +48,20 @@ const assessmentStore = {
     this.store.removeAll(this.collection);
     this.store.save();
   },
- };
+
+  getLatestAssessment(memberId){
+
+          const assessArray = module.exports.getMemberAssessments(memberId);
+          assessArray.sort(function(a,b){
+              return new Date(b.date) - new Date(a.date);
+          });
+          // logger.info("sending back the latest",assessArray[0].weight)
+          // logger.info("sending back the latest",assessArray[0])
+          return assessArray[0].weight;
+
+      }
+
+  }
+
 
 module.exports = assessmentStore;
