@@ -15,6 +15,7 @@ const dashboard = {
         const loggedInMember = accounts.getCurrentMember(request);
 
                 //setting up variables to pass for viewdata using bmiCalc methods
+        // if else statement for new users with no assessments
         let bmiVar = '';
         let bmiCat = '';
         let isIdeal = '';
@@ -35,60 +36,17 @@ const dashboard = {
             title: 'Dashboard',
             assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
             member: memberStore.getMemberById(loggedInMember.id),
-            // bmiCategory: bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember,loggedInMember.startingweight)),
             bmiCategory: bmiCat,
             goals: goalStore.getMemberGoals(loggedInMember.id),
             bmi: bmiVar,
-            // isIdeal: bmiCalc.isIdealBodyWeight(loggedInMember, loggedInMember.startingweight),
-            // isIdeal: Math.round(bmiCalc.isIdealBodyWeight(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id))),
             isIdeal:isIdeal,
             isMember:true,
-            // gender: memberStore.getGender(loggedInMember.gender),
+
         };
-        logger.info("number please",viewData);
         logger.info('about to render', assessmentStore.getAllAssessments());
         logger.info('about to render', goalStore.getAllGoals());
         response.render('dashboard', viewData);
     },
-
-// const dashboard = {
-//     index(request, response) {
-//         logger.info('dashboard rendering');
-//         const loggedInMember = accounts.getCurrentMember(request);
-//
-//
-//         let bmiVar = '';
-//         let bmiCat = '';
-//         let isIdealVar = '';
-//         if (assessmentStore.getMemberAssessments.length == 0 || assessmentStore.getMemberAssessments.length == 1) {
-//             logger.info("start")
-//             logger.info("categorising BMI")
-//             bmiVar = bmiCalc.calculateBmi(loggedInMember, loggedInMember.startingweight);
-//             bmiCat = bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember, loggedInMember.startingweight));
-//             isIdealVar = bmiCalc.isIdealBodyWeight(loggedInMember, loggedInMember.startingweight);
-//         } else {
-//             logger.info("latest assessment", bmiCalc.calculateBmi(loggedInMember.id, assessmentStore.getLatestAssessment(loggedInMember.id)));
-//             bmiVar = bmiCalc.calculateBmi(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id));
-//             bmiCat = bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id)));
-//             isIdealVar = bmiCalc.isIdealBodyWeight(loggedInMember, assessmentStore.getLatestAssessment(loggedInMember.id));
-//         }
-//
-//         const viewData = {
-//             title: 'Dashboard',
-//             assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
-//             member: memberStore.getMemberById(loggedInMember.id),
-//             bmiCategory: bmiCat,
-//             goals: goalStore.getMemberGoals(loggedInMember.id),
-//             bmi: bmiVar,
-//             isIdeal:isIdealVar,
-//             isMember:true,
-//             // gender: memberStore.getGender(loggedInMember.gender),
-//         };
-//         logger.info("number please",viewData);
-//     logger.info('about to render', assessmentStore.getAllAssessments());
-//     logger.info('about to render', goalStore.getAllGoals());
-//     response.render('dashboard', viewData);
-//   },
 
    deleteAssessment(request, response) {
        const assessmentId = request.params.id;
@@ -108,8 +66,8 @@ const dashboard = {
       chest: request.body.chest,
       waist: request.body.waist,
       hips: request.body.hips,
-      higher: 'true',
-      date: new Date()
+      higher: true,
+      date: new Date().toString().substring(0,10)+" "+new Date().toString().substring(11,21)
     };
     logger.debug('Creating a new Assessment', newAssessment);   //update dashboard
     assessmentStore.addAssessment(newAssessment);  //adds a new assessment to the store

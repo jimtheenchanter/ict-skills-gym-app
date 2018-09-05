@@ -8,3 +8,5 @@ tmp
 *.iml
 *.ipr
 *.iws
+node_modules
+semantic

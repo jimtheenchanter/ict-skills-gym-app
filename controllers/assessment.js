@@ -2,9 +2,6 @@
 
 const logger = require('../utils/logger');
 const assessmentStore = require('../models/assessment-store');
-const uuid = require('uuid');
-const bmiCalc = require('../utils/bmi-calc');
-
 
 //assessment object made up of assessmentid and viewdata
 const assessment = {
@@ -18,8 +15,6 @@ const assessment = {
     response.render('assessment', viewData);
   },
   
-   
-
 
 };
 

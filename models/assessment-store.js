@@ -57,7 +57,7 @@ const assessmentStore = {
     });
     // logger.info("sending back the latest",assessArray[0].weight)
     // logger.info("sending back the latest",assessArray[0])
-    return assessArray[0].weight;  //retirm the weight of the latest assessment
+    return assessArray[0].weight;  //return the weight of the latest assessment
 
       }
 

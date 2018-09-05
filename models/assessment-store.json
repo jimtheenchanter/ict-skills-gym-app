@@ -244,17 +244,6 @@
       "comment": "SLower\r\n"
     },
     {
-      "weight": "69",
-      "chest": "02",
-      "thigh": "02",
-      "upperarm": "02",
-      "waist": "02",
-      "hips": "02",
-      "id": "743e83bc-6527-4d7e-92dc-95d588ad33da",
-      "date": "2018-08-30 11:34:00",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0"
-    },
-    {
       "id": "f7076456-831b-4ee2-8a36-9b6c8fd347b9",
       "memberid": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
       "weight": "69",
@@ -297,75 +286,6 @@
       "waist": "75",
       "hips": "75",
       "date": "2018-08-30T21:50:21.838Z"
-    },
-    {
-      "id": "68fa0e3b-5985-4e1a-972a-484093fa57e2",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "weight": "50",
-      "thigh": "20",
-      "upperarm": "20",
-      "chest": "20",
-      "waist": "20",
-      "hips": "20",
-      "date": "2018-09-04T11:48:09.935Z"
-    },
-    {
-      "id": "06d96402-acb6-4449-b6db-d04a08ee8b5b",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "weight": "49",
-      "thigh": "49",
-      "upperarm": "49",
-      "chest": "49",
-      "waist": "49",
-      "hips": "49",
-      "date": "2018-09-04T11:58:52.374Z"
-    },
-    {
-      "id": "4e8b5fe4-0918-48e2-89f4-b23762807c12",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "weight": "48",
-      "thigh": "48",
-      "upperarm": "48",
-      "chest": "48",
-      "waist": "48",
-      "hips": "48",
-      "date": "2018-09-04T12:30:55.349Z"
-    },
-    {
-      "id": "76e45b72-babd-4b00-82f4-be35b7488387",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "weight": "47",
-      "thigh": "50",
-      "upperarm": "50",
-      "chest": "50",
-      "waist": "50",
-      "hips": "50",
-      "higher": true,
-      "date": "2018-09-04T14:29:36.471Z"
-    },
-    {
-      "id": "433df5f7-06f6-41e6-b7e2-69997222e880",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "weight": "48",
-      "thigh": "20",
-      "upperarm": "20",
-      "chest": "20",
-      "waist": "20",
-      "hips": "20",
-      "higher": true,
-      "date": "2018-09-04T14:29:50.824Z"
-    },
-    {
-      "id": "de014443-5f8e-410d-8634-3f2fe95a1dd5",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "weight": "50",
-      "thigh": "60",
-      "upperarm": "60",
-      "chest": "60",
-      "waist": "60",
-      "hips": "60",
-      "higher": "true",
-      "date": "2018-09-04T16:53:02.079Z"
     },
     {
       "id": "07604cc0-d741-4643-9f8b-c62aee838d62",
@@ -414,6 +334,42 @@
       "hips": "50",
       "higher": "true",
       "date": "2018-09-04T20:15:35.516Z"
+    },
+    {
+      "id": "e8f490e7-d0ed-4c6a-bd72-431d6d60f58d",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "weight": "60",
+      "thigh": "65",
+      "upperarm": "65",
+      "chest": "65",
+      "waist": "65",
+      "hips": "65",
+      "higher": true,
+      "date": "Wed Sep 05 018 11:0"
+    },
+    {
+      "id": "da82321c-e218-437c-b86d-2caab568791f",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "weight": "80",
+      "thigh": "80",
+      "upperarm": "80",
+      "chest": "80",
+      "waist": "80",
+      "hips": "80",
+      "higher": true,
+      "date": "Wed Sep 05 018 11:0"
+    },
+    {
+      "id": "d9bd644b-4b47-4d8e-b915-7ddad615cf47",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "weight": "50",
+      "thigh": "50",
+      "upperarm": "50",
+      "chest": "50",
+      "waist": "50",
+      "hips": "50",
+      "higher": true,
+      "date": "Wed Sep 05 2018 11:07"
     }
   ]
 }
