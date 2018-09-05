@@ -25,18 +25,6 @@
       "_locals": {}
     },
     {
-      "firstName": "Bart",
-      "lastName": "Simpson",
-      "email": "bart@simpson.com",
-      "password": "secret",
-      "address": "Springfield, KN",
-      "gender": "M",
-      "height": "1.2",
-      "startingweight": "48",
-      "id": "3ad52697-6d98-4d80-8273-084de5aa06b9",
-      "_locals": {}
-    },
-    {
       "firstName": "Jim",
       "lastName": "O'Brien",
       "email": "jim@obrien.com",
@@ -47,39 +35,6 @@
       "startingweight": "69",
       "id": "5177dfeb-2dc6-4e07-80fb-c924a660340b",
       "_locals": {}
-    },
-    {
-      "firstName": "Moe",
-      "lastName": "Sezlak",
-      "email": "moe@sezlak.com",
-      "password": "secret",
-      "address": "Tavern",
-      "gender": "M",
-      "height": "1.6",
-      "startingweight": "69",
-      "id": "3f5df33c-f67e-4388-a3f2-87fbfaa28204"
-    },
-    {
-      "firstName": "Paul",
-      "lastName": "Simon",
-      "email": "paul@simon.com",
-      "password": "secret",
-      "address": "Graceland",
-      "gender": "M",
-      "height": "1.75",
-      "startingweight": "80",
-      "id": "2dfee3a8-b319-4308-8f01-9727b9e5983a"
-    },
-    {
-      "firstName": "Serge",
-      "lastName": "Gainsburg",
-      "email": "serge@gainsburg.com",
-      "password": "secret",
-      "address": "Gay Paris",
-      "gender": "M",
-      "height": "1.9",
-      "startingweight": "85",
-      "id": "d9a9b5c5-b5f8-49da-b8c7-9ffd835afff7"
     }
   ]
 }

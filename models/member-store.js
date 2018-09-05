@@ -28,18 +28,6 @@ const memberStore = {
     return this.store.findOneBy(this.collection, { email: email });
   },
 
-  getGender(gender) {
-    return this.store.findBy(this.collection, {gender: gender})
-  }  ,
-
-  getHeight(height){
-    return this.store.findBy(this.collection, {height: height});
-  } ,
-
-  getMemberByPassword(password) {
-    return this.store.findOneBy(this.collection, { password: password });
-  },
-
   remove(id) {
     const member = this.getMemberById(id);
     this.store.remove(this.collection, member);

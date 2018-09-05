@@ -19,9 +19,9 @@ const dashboard = {
         let bmiVar = '';
         let bmiCat = '';
         let isIdeal = '';
-        if (assessmentStore.getMemberAssessments(loggedInMember.id).length == 0) {
-            logger.info("start")
-            logger.info("categorising BMI")
+        if (assessmentStore.getMemberAssessments(loggedInMember.id).length === 0) {
+            logger.info("start");
+            logger.info("categorising BMI");
             bmiVar = bmiCalc.calculateBmi(loggedInMember, loggedInMember.startingweight);
             bmiCat = bmiCalc.determineCategory(bmiCalc.calculateBmi(loggedInMember, loggedInMember.startingweight));
             isIdeal = bmiCalc.isIdealBodyWeight(loggedInMember, loggedInMember.startingweight);
@@ -35,6 +35,7 @@ const dashboard = {
         const viewData = {
             title: 'Dashboard',
             assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
+            sortedAssessments: assessmentStore.sortAssessments(loggedInMember.id),
             member: memberStore.getMemberById(loggedInMember.id),
             bmiCategory: bmiCat,
             goals: goalStore.getMemberGoals(loggedInMember.id),
