@@ -7,8 +7,13 @@ Name: James O'Brien
 Student No. 20082197
 Module: ICT Skills
 Course: HDip in Computer Science
+Lecturer: Eamon De Leaster
 
-Bugs: Trend, goal summary, Chronological assessments
+GitHub repository: 
+https://github.com/jimtheenchanter/ict-skills-gym-app
+
+
+Bugs: Trend, goal summary, Chronological assessments not working.
 
 https://stackoverflow.com/questions/6134039/format-number-to-always-show-2-decimal-places
 
@@ -18,7 +23,8 @@ https://stackoverflow.com/questions/39094012/format-a-javascript-date-using-subs
 
 https://help.github.com/articles/ignoring-files/
 
-Made by [Jim O'Brien](https://jimwithaj.com/)
+Made by [Jim O'Brien](https://jimwithaj.com/) 
+
 -------------------
 
 
